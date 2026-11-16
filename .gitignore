@@ -10,3 +10,4 @@ outputs/*
 no
 .venv-vllm-qwen/
 .runtime/
+hf_jobs/
