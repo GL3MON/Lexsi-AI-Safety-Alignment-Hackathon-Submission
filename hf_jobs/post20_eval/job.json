@@ -1,0 +1,37 @@
+{
+  "account": "notGL3MON",
+  "task": "post20-paired-eval",
+  "inference_only": true,
+  "groups": 0,
+  "rollouts_per_group": 1,
+  "mix": {
+    "midturn": 0.6,
+    "opening_clarification": 0.2,
+    "retention": 0.2
+  },
+  "checkpoint": "Retained checkpoint after 20 completed rollout groups",
+  "validation_cases": 114,
+  "tau2_cases": 3,
+  "tau2_max_actor_actions": 20,
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "response_tokens": 192,
+  "max_actions": 4,
+  "baseline": "Paired pilot checkpoint-6 on identical held-out cases",
+  "timeout_minutes": 60,
+  "reserved_maximum_usd": 1.84,
+  "remaining_account_budget_usd": 9.17,
+  "checkpoint_bucket": "notGL3MON/tau2-retail-experiments",
+  "bucket_prefix": "post20-eval-20261115T181717",
+  "hub_output_uploads": false,
+  "initial_adapter_sha256": "210d9192cfad7e5fb999d70fc2e356a8af88788e10d21865fb7d9a95dc43a983",
+  "initial_checkpoint_prefix": "midturn-full-rl-20261115T173756/training/training/checkpoint-7",
+  "tau2_tasks": [
+    "69",
+    "34",
+    "63"
+  ],
+  "job_id": "6af9f72e23985fb9cd839a93",
+  "url": "https://huggingface.co/jobs/notGL3MON/6af9f72e23985fb9cd839a93",
+  "flavor": "l40sx1"
+}

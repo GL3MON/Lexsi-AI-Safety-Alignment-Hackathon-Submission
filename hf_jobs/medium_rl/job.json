@@ -1,0 +1,31 @@
+{
+  "account": "notGL3MON",
+  "task": "medium-retail-rl",
+  "inference_only": false,
+  "groups": 50,
+  "rollouts_per_group": 16,
+  "mix": {
+    "medium_workflows": 0.6,
+    "opening_clarification": 0.2,
+    "retention": 0.2
+  },
+  "checkpoint": "Post20 checkpoint-7",
+  "smoke_groups": 3,
+  "reward": "verified medium progress plus binary short retention",
+  "validation_cases": 114,
+  "validation_every_groups": 30,
+  "temperature": 0.7,
+  "top_p": 1.0,
+  "response_tokens": 192,
+  "max_actions": 8,
+  "baseline": "Paired medium and short validation before updates",
+  "timeout_minutes": 180,
+  "reserved_maximum_usd": 5.44,
+  "remaining_account_budget_usd": 7.99,
+  "checkpoint_bucket": "notGL3MON/tau2-retail-experiments",
+  "bucket_prefix": "medium-rl-20261115T190019",
+  "hub_output_uploads": false,
+  "job_id": "6afa014923985fb9cd83a2e1",
+  "url": "https://huggingface.co/jobs/notGL3MON/6afa014923985fb9cd83a2e1",
+  "flavor": "l40sx1"
+}

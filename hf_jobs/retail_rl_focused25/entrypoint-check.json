@@ -1,0 +1,44 @@
+{
+  "ready": true,
+  "rl_tasks": 22,
+  "context_limit": 8192,
+  "prompt_budget": 7680,
+  "response_reserve": 512,
+  "actor": "retail_sft",
+  "initial_adapter": "/home/harishr/tau2-agenttune-grpo/outputs/rl-initialization/focused-clarification200-checkpoint-25",
+  "chat_template_sha256": "4781ec0b35b9dcf391aaab6cf719b4031705da361d3585083e8689dc7bef2c49",
+  "system_prompt_file": "templates/retail_apigen_sft_system.txt",
+  "user_prompt_file": "",
+  "endpoint_models": {
+    "data": [
+      {
+        "id": "qwen3.5-4b",
+        "created": 1794686784,
+        "object": "model",
+        "owned_by": "vllm",
+        "shutdown_date": null,
+        "root": "Qwen/Qwen3.5-4B",
+        "parent": null,
+        "max_model_len": 16384,
+        "permission": [
+          {
+            "id": "modelperm-991d387dcbcf36cb",
+            "object": "model_permission",
+            "created": 1794686784,
+            "allow_create_engine": false,
+            "allow_sampling": true,
+            "allow_logprobs": true,
+            "allow_search_indices": false,
+            "allow_view": true,
+            "allow_fine_tuning": false,
+            "organization": "*",
+            "group": null,
+            "is_blocking": false
+          }
+        ]
+      }
+    ],
+    "object": "list"
+  },
+  "training_started": false
+}

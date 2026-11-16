@@ -1,0 +1,26 @@
+{
+  "initial_checkpoint": 50,
+  "initial_source": "original Salesforce checkpoint 50, not the previous clarification pilot",
+  "source": "outputs/retail-data/targeted-clarification-240",
+  "train": 200,
+  "validation": 24,
+  "missing_information": 100,
+  "complete_information": 100,
+  "profiles": {
+    "failed_email": 32,
+    "missing_zip": 34,
+    "missing_email": 32,
+    "partial_followup_zip": 34,
+    "missing_first_name": 34,
+    "missing_last_name": 34
+  },
+  "seed": 42,
+  "train_validation_group_overlap": 0,
+  "selection": "100 paired identity families, equally missing/complete; deterministic shuffle",
+  "max_context_tokens": 5260,
+  "data_sha256": {
+    "train.jsonl": "21b9b928ab5243916a39b41d38d3587f61dfcd7ee8a6282d0df22c7fdb660ee9",
+    "validation.jsonl": "2ae2e34b65c6f7e973bdacd2bda65a16cf35f7cdd5e2ab18c7d42030c6d96dc8"
+  },
+  "group_encoding": "Trainer canonical SHA256(domain, task_id); paired records share family task_id"
+}

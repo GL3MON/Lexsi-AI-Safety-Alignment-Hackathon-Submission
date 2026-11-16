@@ -1,0 +1,9 @@
+{
+  "updated_at": 1794801976.7236114,
+  "status": "SUBMITTED_MANUAL_CHECKPOINT_RECOVERY",
+  "job_id": "6afa811929dd05ff0369adb9",
+  "url": "https://huggingface.co/jobs/notGL3MON/6afa811929dd05ff0369adb9",
+  "checkpoint": 70,
+  "initial_adapter_sha256": "3d9f1b681b8a77465714fcdc3fc99494b27a3e28631eb008a55b3ff85d96fe64",
+  "authorization": "User explicitly requested latest saved SFT checkpoint after timeout"
+}

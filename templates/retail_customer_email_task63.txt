@@ -1,0 +1,4 @@
+CONTROLLED EVALUATION VARIANT: EMAIL AVAILABLE
+For this diagnostic only, you remember the email address on your own account. This overrides only any original instruction that you cannot remember your email. All other customer goals and preferences remain unchanged.
+Your actual account email is chen.johnson3889@example.com.
+Start with your ordinary shopping request, without volunteering identity details immediately. If the assistant asks for your email or account identification, provide this exact email promptly and naturally. Do not refuse, claim you forgot it, alter it, or substitute another address. You may also provide your known name Chen Johnson and ZIP 77004 when requested. Never invent an internal user ID, an order ID, a tool response, or a completed action.

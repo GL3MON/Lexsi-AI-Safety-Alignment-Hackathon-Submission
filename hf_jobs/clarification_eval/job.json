@@ -1,0 +1,8 @@
+{
+  "job_id": "6af89e5029dd05ff036795d9",
+  "url": "https://huggingface.co/jobs/GL3MON/6af89e5029dd05ff036795d9",
+  "reserved_maximum_usd": 0.94,
+  "task": "clear-clarification-24-pilot-vs50",
+  "results_repo": "GL3MON/aya-clear-clarification-eval-20261114T174418",
+  "timeout_minutes": 30
+}

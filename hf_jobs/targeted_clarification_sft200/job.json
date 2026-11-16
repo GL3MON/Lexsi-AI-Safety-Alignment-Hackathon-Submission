@@ -1,0 +1,14 @@
+{
+  "job_id": "6af8a53623985fb9cd826271",
+  "url": "https://huggingface.co/jobs/GL3MON/6af8a53623985fb9cd826271",
+  "reserved_maximum_usd": 0.94,
+  "task": "targeted-clarification200-from50",
+  "results_repo": "GL3MON/aya-targeted-clarification200-20261114T181438",
+  "timeout_minutes": 30,
+  "initial_checkpoint": 50,
+  "train_samples": 200,
+  "validation_samples": 24,
+  "batch_size": 8,
+  "gradient_accumulation_steps": 1,
+  "optimizer_steps": 25
+}

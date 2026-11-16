@@ -1,0 +1,18 @@
+{
+  "initial_checkpoint": "focused run-2190c37f90/checkpoint-25",
+  "groups": 2,
+  "rollouts_per_group": 8,
+  "max_actions": 10,
+  "rollout_engine": "transformers",
+  "reward_mode": "additive_grounded",
+  "maximum_reserved_usd": 0.55,
+  "prior_committed_upper_usd": 14.43,
+  "protected_reserve_usd": 5,
+  "timeout_minutes": 17,
+  "results_repo": "GL3MON/tau2-retail-focused25-rl-results",
+  "job_id": "6af8bfc023985fb9cd828079",
+  "url": "https://huggingface.co/jobs/GL3MON/6af8bfc023985fb9cd828079",
+  "reserved_maximum_usd": 0.55,
+  "task": "tau2-retail-focused25-grpo-trial",
+  "flavor": "l40sx1"
+}

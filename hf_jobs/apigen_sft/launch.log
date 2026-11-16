@@ -1,0 +1,1 @@
+{"job_id": "6af855ff23985fb9cd820c2e", "url": "https://huggingface.co/jobs/GL3MON/6af855ff23985fb9cd820c2e", "reserved_maximum_usd": 3.64, "flavor": "l40sx1", "timeout_minutes": 120, "task": "apigen-retail-sft", "epochs": 1, "initial_checkpoint": "glaive-rl17"}

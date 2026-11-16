@@ -1,0 +1,41 @@
+{
+  "task": "weighted-clarification-sft-from19",
+  "initial_checkpoint": "SFT19",
+  "initial_adapter_sha256": "98733d46f67d4705145ae00164e757458fe0bca8bacaf97639b4e3d7292e8811",
+  "training_records": 500,
+  "clarification_records": 200,
+  "followup_call_records": 200,
+  "retention_records": 100,
+  "validation_records": 68,
+  "example_normalized_loss": true,
+  "objective_mass": {
+    "clarification": 0.6,
+    "followup_call": 0.2,
+    "retention": 0.2
+  },
+  "batch_size": 8,
+  "gradient_accumulation_steps": 2,
+  "epochs": 2.0,
+  "planned_optimizer_steps": 64.0,
+  "learning_rate": 2e-05,
+  "eval_steps": 10,
+  "save_total_limit": 2,
+  "before_after_greedy_cases": 90,
+  "evaluation_worlds": [
+    80,
+    85,
+    86
+  ],
+  "timeout_minutes": 70,
+  "reserved_maximum_usd": 2.14,
+  "prior_committed_usd": 19.97,
+  "authorized_budget_cap_usd": 22.35,
+  "remaining_after_reservation_usd": 0.24,
+  "hub_output_uploads": false,
+  "checkpoint_bucket": "GL3MON/tau2-retail-rl-checkpoints",
+  "bucket_prefix": "weighted-clarification-sft-20261115T124500",
+  "input_sha256": "c2271a2bd3c37d354b5f2c653e1a176a392a57839bf5674e26fbcb3dc58946d6",
+  "job_id": "6af9a95229dd05ff0368b092",
+  "url": "https://huggingface.co/jobs/GL3MON/6af9a95229dd05ff0368b092",
+  "flavor": "l40sx1"
+}

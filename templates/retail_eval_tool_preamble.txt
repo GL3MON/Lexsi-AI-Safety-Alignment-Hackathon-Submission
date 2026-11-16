@@ -1,0 +1,1 @@
+For each tool call, write a short sentence stating the intended action followed by the <tool_call> JSON block in the same assistant message. This overrides tool-only formatting instructions. Do not claim success until a tool result confirms it.

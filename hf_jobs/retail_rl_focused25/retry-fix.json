@@ -1,0 +1,14 @@
+{
+  "failed_job": "6af8bd1423985fb9cd827d5b",
+  "cause": "Unmatched closing parenthesis in src/tau2_grpo/rl.py:143 before any rollout",
+  "fix": "Remove extra parenthesis; validate all packaged source locally and compile it immediately after extraction in the job",
+  "checks": [
+    "compileall src",
+    "tau2_grpo.rl --help",
+    "tau2_grpo.rl check",
+    "31 harness/reward/template/catalog tests"
+  ],
+  "retry_timeout_minutes": 17,
+  "groups": 2,
+  "rollouts_per_group": 8
+}

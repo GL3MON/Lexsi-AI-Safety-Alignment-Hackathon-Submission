@@ -1,0 +1,20 @@
+{
+  "initial_checkpoint": "run-2190c37f90/checkpoint-25",
+  "groups": 22,
+  "rollouts_per_group": 8,
+  "max_actions": 10,
+  "timeout_minutes": 90,
+  "maximum_reserved_usd": 2.74,
+  "prior_committed_upper_usd": 14.98,
+  "remaining_original_budget_usd": 2.28,
+  "hub_output_uploads": false,
+  "checkpoint_bucket": "GL3MON/tau2-retail-rl-checkpoints",
+  "checkpoint_retention": 2,
+  "mlp_chunk_size_on_l40s": 1024,
+  "authorization": "User explicitly requested a 1.5-hour job; original $20 total remains the ceiling",
+  "job_id": "6af8c65e29dd05ff0367c522",
+  "url": "https://huggingface.co/jobs/GL3MON/6af8c65e29dd05ff0367c522",
+  "reserved_maximum_usd": 2.74,
+  "task": "retail-grpo-90min",
+  "flavor": "l40sx1"
+}

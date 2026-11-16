@@ -1,0 +1,17 @@
+{
+  "ready": true,
+  "rl_tasks": 22,
+  "context_limit": 8192,
+  "prompt_budget": 7680,
+  "response_reserve": 128,
+  "actor": "retail_sft",
+  "initial_adapter": "/home/harishr/tau2-agenttune-grpo/outputs/rl-initialization/focused-clarification200-checkpoint-25",
+  "chat_template_sha256": "4781ec0b35b9dcf391aaab6cf719b4031705da361d3585083e8689dc7bef2c49",
+  "system_prompt_file": "templates/retail_apigen_sft_system.txt",
+  "user_prompt_file": "",
+  "endpoint_models": {
+    "data": [],
+    "not_required_for_short_retail": true
+  },
+  "training_started": false
+}

@@ -1,0 +1,23 @@
+{
+  "flavor": "l40sx1",
+  "price_per_hour_usd": 1.7999999999999998,
+  "timeout_minutes": 15,
+  "maximum_reserved_usd": 0.49,
+  "previous_reserved_usd": 5.56,
+  "cumulative_budget_usd": 20.0,
+  "protected_reserve_usd": 5.0,
+  "spendable_budget_usd": 15.0,
+  "input_repo": "GL3MON/tau2-retail-rl-job-input",
+  "results_repo": "GL3MON/tau2-retail-rl-job-results",
+  "initial_checkpoint": 100,
+  "rollout_groups": 0,
+  "rollouts_per_group": 0,
+  "max_actions": 10,
+  "wandb": "online",
+  "automatic_retries": false,
+  "submitted": false,
+  "mode": "greedy",
+  "training": false,
+  "temperature": 0
+}
+{"submitted": true, "job_id": "6af821b729dd05ff0366e88c", "url": "https://huggingface.co/jobs/GL3MON/6af821b729dd05ff0366e88c"}

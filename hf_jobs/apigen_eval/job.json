@@ -1,0 +1,8 @@
+{
+  "job_id": "6af8929229dd05ff03678746",
+  "url": "https://huggingface.co/jobs/GL3MON/6af8929229dd05ff03678746",
+  "reserved_maximum_usd": 0.94,
+  "task": "paired-inference-50-96",
+  "results_repo": "GL3MON/aya-apigen-paired-eval-20261114T165539",
+  "timeout_minutes": 30
+}

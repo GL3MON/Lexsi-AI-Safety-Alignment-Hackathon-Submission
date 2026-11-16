@@ -1,0 +1,13 @@
+No files have been modified since last commit. Skipping to prevent empty commit.
+{
+  "input_repo": "GL3MON/tau2-retail-rl-job-input",
+  "result_repo": "GL3MON/tau2-retail-rl-job-results",
+  "payload_sha256": "01ebb535aecc91b3bf06d02bd3467bf79f264135fc2a8226ee2984a6f65b470c",
+  "payload_bytes": 141832893,
+  "initial_checkpoint": 100,
+  "base_model": "GL3MON/tiny-aya-global-function-calling-sft",
+  "base_revision": "df7ccd20bf3e5234bfbe7507821a5ca6ce814a2a",
+  "contains_credentials": false,
+  "compute_launched": false
+}
+Private payload uploaded. No compute job submitted.

@@ -1,0 +1,22 @@
+{
+  "initial_checkpoint": "focused run-2190c37f90/checkpoint-25",
+  "groups": 16,
+  "rollouts_per_group": 8,
+  "max_actions": 4,
+  "response_tokens": 128,
+  "before_after_heldout_greedy_cases": 9,
+  "environment": "short_retail",
+  "reward_mode": "short_verifiable",
+  "native_tau2_scores": false,
+  "timeout_minutes": 90,
+  "reserved_maximum_usd": 2.74,
+  "prior_committed_usd": 15.5,
+  "remaining_original_budget_usd": 1.76,
+  "hub_output_uploads": false,
+  "checkpoint_bucket": "GL3MON/tau2-retail-rl-checkpoints",
+  "bucket_prefix": "short-curriculum-20261115T085045",
+  "job_id": "6af9726629dd05ff03687002",
+  "url": "https://huggingface.co/jobs/GL3MON/6af9726629dd05ff03687002",
+  "task": "short-retail-grpo",
+  "flavor": "l40sx1"
+}

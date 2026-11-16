@@ -1,0 +1,12 @@
+--- a/vllm/platforms/interface.py
++++ b/vllm/platforms/interface.py
+@@ -213,6 +213,9 @@
+         ):
+             device_ids = os.environ[cls.device_control_env_var].split(",")
+             physical_device_id = device_ids[device_id]
++            # Local Qwen MIG UUID support
++            if cls.device_type == "cuda" and physical_device_id.startswith(("MIG-", "GPU-")):
++                return physical_device_id
+             return int(physical_device_id)
+         else:
+             return device_id

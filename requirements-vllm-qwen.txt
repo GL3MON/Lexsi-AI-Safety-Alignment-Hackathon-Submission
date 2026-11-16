@@ -1,0 +1,2 @@
+# Separate environment for Qwen3.5; retain the Aya serving/training environments.
+vllm==0.17.1

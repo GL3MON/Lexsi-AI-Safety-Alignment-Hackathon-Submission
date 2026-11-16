@@ -1,0 +1,28 @@
+{
+  "account": "notGL3MON",
+  "task": "midturn-rl",
+  "inference_only": false,
+  "groups": 10,
+  "rollouts_per_group": 16,
+  "mix": {
+    "midturn": 0.6,
+    "opening_clarification": 0.2,
+    "retention": 0.2
+  },
+  "checkpoint": "Diagnostic SFT50",
+  "smoke_groups": 5,
+  "temperature": 0.7,
+  "top_p": 1.0,
+  "response_tokens": 192,
+  "max_actions": 4,
+  "baseline": "SFT19:57/90, clarification5/24, other52/66",
+  "timeout_minutes": 30,
+  "reserved_maximum_usd": 0.94,
+  "remaining_account_budget_usd": 16.34,
+  "checkpoint_bucket": "notGL3MON/tau2-retail-experiments",
+  "bucket_prefix": "midturn-rl-20261115T170329",
+  "hub_output_uploads": false,
+  "job_id": "6af9e5e123985fb9cd838bff",
+  "url": "https://huggingface.co/jobs/notGL3MON/6af9e5e123985fb9cd838bff",
+  "flavor": "l40sx1"
+}

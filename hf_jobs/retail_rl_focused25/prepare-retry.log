@@ -1,0 +1,632 @@
+{
+  "input_repo": "GL3MON/tau2-retail-focused25-rl-input",
+  "result_repo": "GL3MON/tau2-retail-focused25-rl-results",
+  "payload_sha256": "add02570ff9f6784b9a27d68499a39eaf96ca91091c0cd7fb5c625fcc2f3dac2",
+  "payload_bytes": 141831680,
+  "initial_checkpoint": 25,
+  "base_model": "GL3MON/tiny-aya-global-function-calling-sft",
+  "base_revision": "df7ccd20bf3e5234bfbe7507821a5ca6ce814a2a",
+  "contains_credentials": false,
+  "compute_launched": false
+}
+Processing Files (0 / 0)      : |          |  0.00B /  0.00B            
+New Data Upload               : |          |  0.00B /  0.00B            [A
+
+  .../artifacts/payload.tar.gz:   0%|          | 9.68kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          | 9.68kB /  142MB            [A[AProcessing Files (0 / 1)      :   0%|          | 9.68kB /  142MB,   939B/s  
+
+  .../artifacts/payload.tar.gz:   0%|          | 9.68kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          | 9.68kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          | 9.68kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          | 9.68kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          | 9.68kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          | 18.3kB /  142MB            [A[AProcessing Files (0 / 1)      :   0%|          | 18.3kB /  142MB, 1.71kB/s  
+
+  .../artifacts/payload.tar.gz:   0%|          | 18.3kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          | 18.3kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          | 18.3kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          | 18.3kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          | 18.3kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          | 57.3kB /  142MB            [A[AProcessing Files (0 / 1)      :   0%|          | 57.3kB /  142MB, 5.28kB/s  
+
+  .../artifacts/payload.tar.gz:   0%|          |  158kB /  142MB            [A[AProcessing Files (0 / 1)      :   0%|          |  158kB /  142MB, 14.7kB/s  
+
+  .../artifacts/payload.tar.gz:   0%|          |  158kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          |  158kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          |  158kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          |  158kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          |  158kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          |  158kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          |  158kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          |  682kB /  142MB            [A[AProcessing Files (0 / 1)      :   0%|          |  682kB /  142MB, 61.9kB/s  
+New Data Upload               :   0%|          |  524kB /  142MB, 48.2kB/s  [A
+
+  .../artifacts/payload.tar.gz:   0%|          |  682kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          |  682kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   0%|          |  682kB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   1%|          | 1.21MB /  142MB            [A[AProcessing Files (0 / 1)      :   1%|          | 1.21MB /  142MB,  107kB/s  
+New Data Upload               :   1%|          | 1.05MB /  142MB, 94.3kB/s  [A
+
+  .../artifacts/payload.tar.gz:   1%|          | 1.21MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   1%|          | 1.21MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   1%|          | 1.21MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   1%|          | 1.21MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   1%|          | 1.73MB /  142MB            [A[AProcessing Files (0 / 1)      :   1%|          | 1.73MB /  142MB,  150kB/s  
+New Data Upload               :   1%|          | 1.57MB /  142MB,  137kB/s  [A
+
+  .../artifacts/payload.tar.gz:   1%|          | 1.73MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   2%|▏         | 2.78MB /  142MB            [A[AProcessing Files (0 / 1)      :   2%|▏         | 2.78MB /  142MB,  241kB/s  
+New Data Upload               :   2%|▏         | 2.62MB /  142MB,  229kB/s  [A
+
+  .../artifacts/payload.tar.gz:   2%|▏         | 2.78MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   2%|▏         | 2.78MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   3%|▎         | 3.83MB /  142MB            [A[AProcessing Files (0 / 1)      :   3%|▎         | 3.83MB /  142MB,  329kB/s  
+New Data Upload               :   3%|▎         | 3.67MB /  142MB,  317kB/s  [A
+
+  .../artifacts/payload.tar.gz:   3%|▎         | 3.83MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   4%|▍         | 5.40MB /  142MB            [A[AProcessing Files (0 / 1)      :   4%|▍         | 5.40MB /  142MB,  462kB/s  
+New Data Upload               :   4%|▎         | 5.24MB /  142MB,  451kB/s  [A
+
+  .../artifacts/payload.tar.gz:   4%|▍         | 5.40MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   5%|▍         | 6.98MB /  142MB            [A[AProcessing Files (0 / 1)      :   5%|▍         | 6.98MB /  142MB,  594kB/s  
+New Data Upload               :   5%|▍         | 6.82MB /  142MB,  582kB/s  [A
+
+  .../artifacts/payload.tar.gz:   5%|▍         | 6.98MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:   5%|▌         | 7.50MB /  142MB            [A[AProcessing Files (0 / 1)      :   5%|▌         | 7.50MB /  142MB,  629kB/s  
+New Data Upload               :   5%|▌         | 7.34MB /  142MB,  618kB/s  [A
+
+  .../artifacts/payload.tar.gz:   8%|▊         | 10.6MB /  142MB            [A[AProcessing Files (0 / 1)      :   8%|▊         | 10.6MB /  142MB,  901kB/s  
+New Data Upload               :   7%|▋         | 10.5MB /  142MB,  889kB/s  [A
+
+  .../artifacts/payload.tar.gz:   8%|▊         | 10.6MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  10%|█         | 14.3MB /  142MB            [A[AProcessing Files (0 / 1)      :  10%|█         | 14.3MB /  142MB, 1.21MB/s  
+New Data Upload               :  10%|▉         | 14.2MB /  142MB, 1.20MB/s  [A
+
+  .../artifacts/payload.tar.gz:  10%|█         | 14.3MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  10%|█         | 14.3MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  12%|█▏        | 16.9MB /  142MB            [A[AProcessing Files (0 / 1)      :  12%|█▏        | 16.9MB /  142MB, 1.40MB/s  
+New Data Upload               :  12%|█▏        | 16.8MB /  142MB, 1.39MB/s  [A
+
+  .../artifacts/payload.tar.gz:  12%|█▏        | 16.9MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  14%|█▍        | 20.1MB /  142MB            [A[AProcessing Files (0 / 1)      :  14%|█▍        | 20.1MB /  142MB, 1.65MB/s  
+New Data Upload               :  14%|█▍        | 19.9MB /  142MB, 1.64MB/s  [A
+
+  .../artifacts/payload.tar.gz:  14%|█▍        | 20.1MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  16%|█▌        | 22.2MB /  142MB            [A[AProcessing Files (0 / 1)      :  16%|█▌        | 22.2MB /  142MB, 1.81MB/s  
+New Data Upload               :  16%|█▌        | 22.0MB /  142MB, 1.79MB/s  [A
+
+  .../artifacts/payload.tar.gz:  16%|█▋        | 23.2MB /  142MB            [A[AProcessing Files (0 / 1)      :  16%|█▋        | 23.2MB /  142MB, 1.88MB/s  
+New Data Upload               :  16%|█▋        | 23.1MB /  142MB, 1.87MB/s  [A
+
+  .../artifacts/payload.tar.gz:  16%|█▋        | 23.2MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  19%|█▊        | 26.4MB /  142MB            [A[AProcessing Files (0 / 1)      :  19%|█▊        | 26.4MB /  142MB, 2.12MB/s  
+New Data Upload               :  19%|█▊        | 26.2MB /  142MB, 2.11MB/s  [A
+
+  .../artifacts/payload.tar.gz:  19%|█▊        | 26.4MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  21%|██        | 29.5MB /  142MB            [A[AProcessing Files (0 / 1)      :  21%|██        | 29.5MB /  142MB, 2.35MB/s  
+New Data Upload               :  21%|██        | 29.4MB /  142MB, 2.34MB/s  [A
+
+  .../artifacts/payload.tar.gz:  21%|██        | 30.0MB /  142MB            [A[AProcessing Files (0 / 1)      :  21%|██        | 30.0MB /  142MB, 2.38MB/s  
+New Data Upload               :  21%|██        | 29.9MB /  142MB, 2.37MB/s  [A
+
+  .../artifacts/payload.tar.gz:  21%|██        | 30.0MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  24%|██▍       | 33.7MB /  142MB            [A[AProcessing Files (0 / 1)      :  24%|██▍       | 33.7MB /  142MB, 2.65MB/s  
+New Data Upload               :  24%|██▎       | 33.6MB /  142MB, 2.64MB/s  [A
+
+  .../artifacts/payload.tar.gz:  24%|██▍       | 33.7MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  26%|██▌       | 36.9MB /  142MB            [A[AProcessing Files (0 / 1)      :  26%|██▌       | 36.9MB /  142MB, 2.87MB/s  
+New Data Upload               :  26%|██▌       | 36.7MB /  142MB, 2.86MB/s  [A
+
+  .../artifacts/payload.tar.gz:  26%|██▌       | 36.9MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  28%|██▊       | 40.0MB /  142MB            [A[AProcessing Files (0 / 1)      :  28%|██▊       | 40.0MB /  142MB, 3.09MB/s  
+New Data Upload               :  28%|██▊       | 39.9MB /  142MB, 3.08MB/s  [A
+
+  .../artifacts/payload.tar.gz:  28%|██▊       | 40.0MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  28%|██▊       | 40.0MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  30%|███       | 43.2MB /  142MB            [A[AProcessing Files (0 / 1)      :  30%|███       | 43.2MB /  142MB, 3.28MB/s  
+New Data Upload               :  30%|███       | 43.0MB /  142MB, 3.27MB/s  [A
+
+  .../artifacts/payload.tar.gz:  31%|███       | 43.7MB /  142MB            [A[AProcessing Files (0 / 1)      :  31%|███       | 43.7MB /  142MB, 3.29MB/s  
+New Data Upload               :  31%|███       | 43.5MB /  142MB, 3.28MB/s  [A
+
+  .../artifacts/payload.tar.gz:  33%|███▎      | 47.4MB /  142MB            [A[AProcessing Files (0 / 1)      :  33%|███▎      | 47.4MB /  142MB, 3.57MB/s  
+New Data Upload               :  33%|███▎      | 47.2MB /  142MB, 3.57MB/s  [A
+
+  .../artifacts/payload.tar.gz:  33%|███▎      | 47.4MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  33%|███▎      | 47.4MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  35%|███▌      | 50.0MB /  142MB            [A[AProcessing Files (0 / 1)      :  35%|███▌      | 50.0MB /  142MB, 3.70MB/s  
+New Data Upload               :  35%|███▌      | 49.8MB /  142MB, 3.70MB/s  [A
+
+  .../artifacts/payload.tar.gz:  35%|███▌      | 50.0MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  37%|███▋      | 53.1MB /  142MB            [A[AProcessing Files (0 / 1)      :  37%|███▋      | 53.1MB /  142MB, 3.90MB/s  
+New Data Upload               :  37%|███▋      | 53.0MB /  142MB, 3.90MB/s  [A
+
+  .../artifacts/payload.tar.gz:  37%|███▋      | 53.1MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  40%|███▉      | 56.3MB /  142MB            [A[AProcessing Files (0 / 1)      :  40%|███▉      | 56.3MB /  142MB, 4.10MB/s  
+New Data Upload               :  40%|███▉      | 56.1MB /  142MB, 4.09MB/s  [A
+
+  .../artifacts/payload.tar.gz:  40%|███▉      | 56.3MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  40%|████      | 56.8MB /  142MB            [A[AProcessing Files (0 / 1)      :  40%|████      | 56.8MB /  142MB, 4.08MB/s  
+New Data Upload               :  40%|███▉      | 56.6MB /  142MB, 4.07MB/s  [A
+
+  .../artifacts/payload.tar.gz:  42%|████▏     | 59.9MB /  142MB            [A[AProcessing Files (0 / 1)      :  42%|████▏     | 59.9MB /  142MB, 4.30MB/s  
+New Data Upload               :  42%|████▏     | 59.8MB /  142MB, 4.30MB/s  [A
+
+  .../artifacts/payload.tar.gz:  42%|████▏     | 59.9MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  44%|████▍     | 63.1MB /  142MB            [A[AProcessing Files (0 / 1)      :  44%|████▍     | 63.1MB /  142MB, 4.49MB/s  
+New Data Upload               :  44%|████▍     | 62.9MB /  142MB, 4.48MB/s  [A
+
+  .../artifacts/payload.tar.gz:  44%|████▍     | 63.1MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  46%|████▌     | 64.7MB /  142MB            [A[AProcessing Files (0 / 1)      :  46%|████▌     | 64.7MB /  142MB, 4.55MB/s  
+New Data Upload               :  46%|████▌     | 64.5MB /  142MB, 4.54MB/s  [A
+
+  .../artifacts/payload.tar.gz:  47%|████▋     | 66.2MB /  142MB            [A[AProcessing Files (0 / 1)      :  47%|████▋     | 66.2MB /  142MB, 4.64MB/s  
+New Data Upload               :  47%|████▋     | 66.1MB /  142MB, 4.63MB/s  [A
+
+  .../artifacts/payload.tar.gz:  47%|████▋     | 66.8MB /  142MB            [A[AProcessing Files (0 / 1)      :  47%|████▋     | 66.8MB /  142MB, 4.64MB/s  
+New Data Upload               :  47%|████▋     | 66.6MB /  142MB, 4.64MB/s  [A
+
+  .../artifacts/payload.tar.gz:  49%|████▉     | 69.9MB /  142MB            [A[AProcessing Files (0 / 1)      :  49%|████▉     | 69.9MB /  142MB, 4.86MB/s  
+New Data Upload               :  49%|████▉     | 69.7MB /  142MB, 4.86MB/s  [A
+
+  .../artifacts/payload.tar.gz:  49%|████▉     | 69.9MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  50%|████▉     | 70.4MB /  142MB            [A[AProcessing Files (0 / 1)      :  50%|████▉     | 70.4MB /  142MB, 4.82MB/s  
+New Data Upload               :  50%|████▉     | 70.2MB /  142MB, 4.82MB/s  [A
+
+  .../artifacts/payload.tar.gz:  50%|████▉     | 70.4MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  50%|████▉     | 70.9MB /  142MB            [A[AProcessing Files (0 / 1)      :  50%|████▉     | 70.9MB /  142MB, 4.79MB/s  
+New Data Upload               :  50%|████▉     | 70.7MB /  142MB, 4.78MB/s  [A
+
+  .../artifacts/payload.tar.gz:  50%|████▉     | 70.9MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  50%|████▉     | 70.9MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  52%|█████▏    | 73.5MB /  142MB            [A[AProcessing Files (0 / 1)      :  52%|█████▏    | 73.5MB /  142MB, 4.88MB/s  
+New Data Upload               :  52%|█████▏    | 73.4MB /  142MB, 4.88MB/s  [A
+
+  .../artifacts/payload.tar.gz:  53%|█████▎    | 75.1MB /  142MB            [A[AProcessing Files (0 / 1)      :  53%|█████▎    | 75.1MB /  142MB, 4.97MB/s  
+New Data Upload               :  53%|█████▎    | 74.9MB /  142MB, 4.96MB/s  [A
+
+  .../artifacts/payload.tar.gz:  53%|█████▎    | 75.1MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  55%|█████▌    | 78.2MB /  142MB            [A[AProcessing Files (0 / 1)      :  55%|█████▌    | 78.2MB /  142MB, 5.15MB/s  
+New Data Upload               :  55%|█████▌    | 78.1MB /  142MB, 5.14MB/s  [A
+
+  .../artifacts/payload.tar.gz:  56%|█████▌    | 78.8MB /  142MB            [A[AProcessing Files (0 / 1)      :  56%|█████▌    | 78.8MB /  142MB, 5.15MB/s  
+New Data Upload               :  55%|█████▌    | 78.6MB /  142MB, 5.14MB/s  [A
+
+  .../artifacts/payload.tar.gz:  56%|█████▌    | 79.4MB /  142MB            [A[AProcessing Files (0 / 1)      :  56%|█████▌    | 79.4MB /  142MB, 5.16MB/s  
+New Data Upload               :  56%|█████▌    | 79.3MB /  142MB, 5.15MB/s  [A
+
+  .../artifacts/payload.tar.gz:  56%|█████▌    | 79.4MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  56%|█████▌    | 79.4MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  56%|█████▌    | 79.4MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  56%|█████▋    | 80.0MB /  142MB            [A[AProcessing Files (0 / 1)      :  56%|█████▋    | 80.0MB /  142MB, 5.04MB/s  
+New Data Upload               :  56%|█████▋    | 79.8MB /  142MB, 5.03MB/s  [A
+
+  .../artifacts/payload.tar.gz:  56%|█████▋    | 80.0MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  56%|█████▋    | 80.0MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  56%|█████▋    | 80.0MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  56%|█████▋    | 80.0MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  57%|█████▋    | 81.0MB /  142MB            [A[AProcessing Files (0 / 1)      :  57%|█████▋    | 81.0MB /  142MB, 4.92MB/s  
+New Data Upload               :  57%|█████▋    | 80.9MB /  142MB, 4.91MB/s  [A
+
+  .../artifacts/payload.tar.gz:  57%|█████▋    | 81.0MB /  142MB            [A[AProcessing Files (0 / 1)      :  57%|█████▋    | 81.0MB /  142MB, 4.88MB/s  
+New Data Upload               :  57%|█████▋    | 80.9MB /  142MB, 4.87MB/s  [A
+
+  .../artifacts/payload.tar.gz:  57%|█████▋    | 81.5MB /  142MB            [A[AProcessing Files (0 / 1)      :  57%|█████▋    | 81.5MB /  142MB, 4.88MB/s  
+New Data Upload               :  57%|█████▋    | 81.4MB /  142MB, 4.88MB/s  [A
+
+  .../artifacts/payload.tar.gz:  57%|█████▋    | 81.5MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  57%|█████▋    | 81.5MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  57%|█████▋    | 81.5MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  57%|█████▋    | 81.5MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  58%|█████▊    | 82.6MB /  142MB            [A[AProcessing Files (0 / 1)      :  58%|█████▊    | 82.6MB /  142MB, 4.77MB/s  
+New Data Upload               :  58%|█████▊    | 82.4MB /  142MB, 4.77MB/s  [A
+
+  .../artifacts/payload.tar.gz:  58%|█████▊    | 82.6MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  58%|█████▊    | 82.6MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  58%|█████▊    | 82.6MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  58%|█████▊    | 82.6MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  59%|█████▉    | 84.2MB /  142MB            [A[AProcessing Files (0 / 1)      :  59%|█████▉    | 84.2MB /  142MB, 4.71MB/s  
+New Data Upload               :  59%|█████▉    | 84.0MB /  142MB, 4.71MB/s  [A
+
+  .../artifacts/payload.tar.gz:  59%|█████▉    | 84.2MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  60%|██████    | 85.2MB /  142MB            [A[AProcessing Files (0 / 1)      :  60%|██████    | 85.2MB /  142MB, 4.72MB/s  
+New Data Upload               :  60%|██████    | 85.1MB /  142MB, 4.71MB/s  [A
+
+  .../artifacts/payload.tar.gz:  60%|██████    | 85.2MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  60%|██████    | 85.2MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  60%|██████    | 85.2MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  60%|██████    | 85.2MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  61%|██████    | 86.8MB /  142MB            [A[AProcessing Files (0 / 1)      :  61%|██████    | 86.8MB /  142MB, 4.66MB/s  
+New Data Upload               :  61%|██████    | 86.6MB /  142MB, 4.65MB/s  [A
+
+  .../artifacts/payload.tar.gz:  61%|██████    | 86.8MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  61%|██████    | 86.8MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  61%|██████    | 86.8MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  61%|██████    | 86.8MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  62%|██████▏   | 87.8MB /  142MB            [A[AProcessing Files (0 / 1)      :  62%|██████▏   | 87.8MB /  142MB, 4.56MB/s  
+New Data Upload               :  62%|██████▏   | 87.7MB /  142MB, 4.56MB/s  [A
+
+  .../artifacts/payload.tar.gz:  62%|██████▏   | 87.8MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  62%|██████▏   | 87.8MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  62%|██████▏   | 87.8MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  62%|██████▏   | 87.8MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  63%|██████▎   | 89.4MB /  142MB            [A[AProcessing Files (0 / 1)      :  63%|██████▎   | 89.4MB /  142MB, 4.51MB/s  
+New Data Upload               :  63%|██████▎   | 89.2MB /  142MB, 4.50MB/s  [A
+
+  .../artifacts/payload.tar.gz:  63%|██████▎   | 89.4MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  63%|██████▎   | 89.4MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  63%|██████▎   | 89.4MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  64%|██████▍   | 91.0MB /  142MB            [A[AProcessing Files (0 / 1)      :  64%|██████▍   | 91.0MB /  142MB, 4.49MB/s  
+New Data Upload               :  64%|██████▍   | 90.8MB /  142MB, 4.48MB/s  [A
+
+  .../artifacts/payload.tar.gz:  64%|██████▍   | 91.0MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  64%|██████▍   | 91.0MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  65%|██████▌   | 92.5MB /  142MB            [A[AProcessing Files (0 / 1)      :  65%|██████▌   | 92.5MB /  142MB, 4.51MB/s  
+New Data Upload               :  65%|██████▌   | 92.4MB /  142MB, 4.50MB/s  [A
+
+  .../artifacts/payload.tar.gz:  65%|██████▌   | 92.5MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  65%|██████▌   | 92.5MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  65%|██████▌   | 92.5MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  65%|██████▌   | 92.5MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  66%|██████▋   | 94.1MB /  142MB            [A[AProcessing Files (0 / 1)      :  66%|██████▋   | 94.1MB /  142MB, 4.46MB/s  
+New Data Upload               :  66%|██████▋   | 94.0MB /  142MB, 4.45MB/s  [A
+
+  .../artifacts/payload.tar.gz:  66%|██████▋   | 94.1MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  67%|██████▋   | 95.2MB /  142MB            [A[AProcessing Files (0 / 1)      :  67%|██████▋   | 95.2MB /  142MB, 4.47MB/s  
+New Data Upload               :  67%|██████▋   | 95.0MB /  142MB, 4.46MB/s  [A
+
+  .../artifacts/payload.tar.gz:  67%|██████▋   | 95.2MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  67%|██████▋   | 95.2MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  68%|██████▊   | 96.7MB /  142MB            [A[AProcessing Files (0 / 1)      :  68%|██████▊   | 96.7MB /  142MB, 4.49MB/s  
+New Data Upload               :  68%|██████▊   | 96.6MB /  142MB, 4.48MB/s  [A
+
+  .../artifacts/payload.tar.gz:  68%|██████▊   | 96.7MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  69%|██████▉   | 98.3MB /  142MB            [A[AProcessing Files (0 / 1)      :  69%|██████▉   | 98.3MB /  142MB, 4.54MB/s  
+New Data Upload               :  69%|██████▉   | 98.2MB /  142MB, 4.53MB/s  [A
+
+  .../artifacts/payload.tar.gz:  69%|██████▉   | 98.3MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  69%|██████▉   | 98.3MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  70%|███████   | 99.9MB /  142MB            [A[AProcessing Files (0 / 1)      :  70%|███████   | 99.9MB /  142MB, 4.55MB/s  
+New Data Upload               :  70%|███████   | 99.7MB /  142MB, 4.55MB/s  [A
+
+  .../artifacts/payload.tar.gz:  70%|███████   | 99.9MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  72%|███████▏  |  101MB /  142MB            [A[AProcessing Files (0 / 1)      :  72%|███████▏  |  101MB /  142MB, 4.60MB/s  
+New Data Upload               :  72%|███████▏  |  101MB /  142MB, 4.60MB/s  [A
+
+  .../artifacts/payload.tar.gz:  72%|███████▏  |  101MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  72%|███████▏  |  103MB /  142MB            [A[AProcessing Files (0 / 1)      :  72%|███████▏  |  103MB /  142MB, 4.61MB/s  
+New Data Upload               :  72%|███████▏  |  102MB /  142MB, 4.61MB/s  [A
+
+  .../artifacts/payload.tar.gz:  72%|███████▏  |  103MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  72%|███████▏  |  103MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  73%|███████▎  |  104MB /  142MB            [A[AProcessing Files (0 / 1)      :  73%|███████▎  |  104MB /  142MB, 4.63MB/s  
+New Data Upload               :  73%|███████▎  |  104MB /  142MB, 4.62MB/s  [A
+
+  .../artifacts/payload.tar.gz:  73%|███████▎  |  104MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  74%|███████▍  |  106MB /  142MB            [A[AProcessing Files (0 / 1)      :  74%|███████▍  |  106MB /  142MB, 4.68MB/s  
+New Data Upload               :  74%|███████▍  |  105MB /  142MB, 4.67MB/s  [A
+
+  .../artifacts/payload.tar.gz:  74%|███████▍  |  106MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  76%|███████▌  |  107MB /  142MB            [A[AProcessing Files (0 / 1)      :  76%|███████▌  |  107MB /  142MB, 4.73MB/s  
+New Data Upload               :  76%|███████▌  |  107MB /  142MB, 4.72MB/s  [A
+
+  .../artifacts/payload.tar.gz:  76%|███████▌  |  107MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  76%|███████▌  |  107MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  76%|███████▋  |  108MB /  142MB            [A[AProcessing Files (0 / 1)      :  76%|███████▋  |  108MB /  142MB, 4.70MB/s  
+New Data Upload               :  76%|███████▋  |  108MB /  142MB, 4.69MB/s  [A
+
+  .../artifacts/payload.tar.gz:  76%|███████▋  |  108MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  79%|███████▊  |  111MB /  142MB            [A[AProcessing Files (0 / 1)      :  79%|███████▊  |  111MB /  142MB, 4.86MB/s  
+New Data Upload               :  79%|███████▊  |  111MB /  142MB, 4.86MB/s  [A
+
+  .../artifacts/payload.tar.gz:  79%|███████▊  |  111MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  79%|███████▊  |  111MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  80%|███████▉  |  113MB /  142MB            [A[AProcessing Files (0 / 1)      :  80%|███████▉  |  113MB /  142MB, 4.87MB/s  
+New Data Upload               :  80%|███████▉  |  113MB /  142MB, 4.87MB/s  [A
+
+  .../artifacts/payload.tar.gz:  80%|███████▉  |  113MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  82%|████████▏ |  116MB /  142MB            [A[AProcessing Files (0 / 1)      :  82%|████████▏ |  116MB /  142MB, 5.00MB/s  
+New Data Upload               :  81%|████████▏ |  115MB /  142MB, 4.99MB/s  [A
+
+  .../artifacts/payload.tar.gz:  82%|████████▏ |  116MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  82%|████████▏ |  116MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  83%|████████▎ |  117MB /  142MB            [A[AProcessing Files (0 / 1)      :  83%|████████▎ |  117MB /  142MB, 5.00MB/s  
+New Data Upload               :  83%|████████▎ |  117MB /  142MB, 5.00MB/s  [A
+
+  .../artifacts/payload.tar.gz:  83%|████████▎ |  117MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  85%|████████▍ |  120MB /  142MB            [A[AProcessing Files (0 / 1)      :  85%|████████▍ |  120MB /  142MB, 5.16MB/s  
+New Data Upload               :  85%|████████▍ |  120MB /  142MB, 5.16MB/s  [A
+
+  .../artifacts/payload.tar.gz:  85%|████████▍ |  120MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  86%|████████▌ |  121MB /  142MB            [A[AProcessing Files (0 / 1)      :  86%|████████▌ |  121MB /  142MB, 5.16MB/s  
+New Data Upload               :  86%|████████▌ |  121MB /  142MB, 5.16MB/s  [A
+
+  .../artifacts/payload.tar.gz:  86%|████████▌ |  121MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  87%|████████▋ |  123MB /  142MB            [A[AProcessing Files (0 / 1)      :  87%|████████▋ |  123MB /  142MB, 5.21MB/s  
+New Data Upload               :  87%|████████▋ |  123MB /  142MB, 5.20MB/s  [A
+
+  .../artifacts/payload.tar.gz:  88%|████████▊ |  125MB /  142MB            [A[AProcessing Files (0 / 1)      :  88%|████████▊ |  125MB /  142MB, 5.28MB/s  
+New Data Upload               :  88%|████████▊ |  124MB /  142MB, 5.28MB/s  [A
+
+  .../artifacts/payload.tar.gz:  88%|████████▊ |  125MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  90%|████████▉ |  127MB /  142MB            [A[AProcessing Files (0 / 1)      :  90%|████████▉ |  127MB /  142MB, 5.40MB/s  
+New Data Upload               :  90%|████████▉ |  127MB /  142MB, 5.40MB/s  [A
+
+  .../artifacts/payload.tar.gz:  90%|████████▉ |  127MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  91%|█████████ |  129MB /  142MB            [A[AProcessing Files (0 / 1)      :  91%|█████████ |  129MB /  142MB, 5.44MB/s  
+New Data Upload               :  91%|█████████ |  129MB /  142MB, 5.43MB/s  [A
+
+  .../artifacts/payload.tar.gz:  91%|█████████▏|  130MB /  142MB            [A[AProcessing Files (0 / 1)      :  91%|█████████▏|  130MB /  142MB, 5.47MB/s  
+New Data Upload               :  91%|█████████▏|  130MB /  142MB, 5.47MB/s  [A
+
+  .../artifacts/payload.tar.gz:  91%|█████████▏|  130MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  94%|█████████▎|  133MB /  142MB            [A[AProcessing Files (0 / 1)      :  94%|█████████▎|  133MB /  142MB, 5.63MB/s  
+New Data Upload               :  94%|█████████▎|  133MB /  142MB, 5.62MB/s  [A
+
+  .../artifacts/payload.tar.gz:  94%|█████████▎|  133MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  94%|█████████▍|  134MB /  142MB            [A[AProcessing Files (0 / 1)      :  94%|█████████▍|  134MB /  142MB, 5.62MB/s  
+New Data Upload               :  94%|█████████▍|  134MB /  142MB, 5.62MB/s  [A
+
+  .../artifacts/payload.tar.gz:  96%|█████████▌|  136MB /  142MB            [A[AProcessing Files (0 / 1)      :  96%|█████████▌|  136MB /  142MB, 5.70MB/s  
+New Data Upload               :  96%|█████████▌|  135MB /  142MB, 5.69MB/s  [A
+
+  .../artifacts/payload.tar.gz:  96%|█████████▌|  136MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  98%|█████████▊|  139MB /  142MB            [A[AProcessing Files (0 / 1)      :  98%|█████████▊|  139MB /  142MB, 5.84MB/s  
+New Data Upload               :  98%|█████████▊|  139MB /  142MB, 5.84MB/s  [A
+
+  .../artifacts/payload.tar.gz:  98%|█████████▊|  139MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz:  99%|█████████▊|  140MB /  142MB            [A[AProcessing Files (0 / 1)      :  99%|█████████▊|  140MB /  142MB, 5.84MB/s  
+New Data Upload               :  99%|█████████▊|  140MB /  142MB, 5.83MB/s  [A
+
+  .../artifacts/payload.tar.gz: 100%|█████████▉|  141MB /  142MB            [A[AProcessing Files (0 / 1)      : 100%|█████████▉|  141MB /  142MB, 5.91MB/s  
+New Data Upload               : 100%|█████████▉|  141MB /  142MB, 5.91MB/s  [A
+
+  .../artifacts/payload.tar.gz: 100%|█████████▉|  141MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz: 100%|█████████▉|  142MB /  142MB            [A[AProcessing Files (0 / 1)      : 100%|█████████▉|  142MB /  142MB, 5.86MB/s  
+New Data Upload               : 100%|█████████▉|  142MB /  142MB, 5.86MB/s  [A
+
+  .../artifacts/payload.tar.gz: 100%|█████████▉|  142MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz: 100%|█████████▉|  142MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz: 100%|█████████▉|  142MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz: 100%|█████████▉|  142MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz: 100%|█████████▉|  142MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz: 100%|█████████▉|  142MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz: 100%|█████████▉|  142MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz: 100%|█████████▉|  142MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz: 100%|█████████▉|  142MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz: 100%|█████████▉|  142MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz: 100%|█████████▉|  142MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz: 100%|█████████▉|  142MB /  142MB            [A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[AProcessing Files (1 / 1)      : 100%|██████████|  142MB /  142MB, 5.32MB/s  
+New Data Upload               : 100%|██████████|  142MB /  142MB, 5.31MB/s  [A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    :           |   0%            [A[A[A
+
+
+Validating                    :           |   0%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    :           |   0%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    :           |   0%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    :           |   0%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    :           |   0%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    :           |   0%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    :           |   0%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    :           |   0%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    :           |   0%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    :           |   0%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    :           |   0%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    :           |   0%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    :           |   0%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    :           |   0%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    : ██████████| 100%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    : ██████████| 100%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    : ██████████| 100%            [A[A[A
+
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            [A[A
+
+
+Validating                    : ██████████| 100%            [A[A[AProcessing Files (1 / 1)      : 100%|██████████|  142MB /  142MB, 4.68MB/s  
+New Data Upload               : 100%|██████████|  142MB /  142MB, 4.67MB/s  
+Validating                    : ██████████| 100%            
+  .../artifacts/payload.tar.gz: 100%|██████████|  142MB /  142MB            
+Private payload uploaded. No compute job submitted.

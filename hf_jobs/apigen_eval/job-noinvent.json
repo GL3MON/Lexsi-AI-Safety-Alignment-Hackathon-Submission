@@ -1,0 +1,8 @@
+{
+  "job_id": "6af8979b29dd05ff03678d28",
+  "url": "https://huggingface.co/jobs/GL3MON/6af8979b29dd05ff03678d28",
+  "reserved_maximum_usd": 0.94,
+  "task": "noinvent-inference-17-50-96",
+  "results_repo": "GL3MON/aya-apigen-noinvent-eval-20261114T171641",
+  "timeout_minutes": 30
+}

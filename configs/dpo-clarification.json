@@ -1,0 +1,21 @@
+{
+  "model_id": "outputs/hf-export/tiny-aya-global-function-calling-sft-525",
+  "initial_adapter": "outputs/rl-initialization/post-rl-clarification-sft-best19",
+  "dataset_path": "outputs/retail-data/clarification-dpo/train.jsonl",
+  "eval_dataset_path": "outputs/retail-data/clarification-dpo/validation.jsonl",
+  "output_dir": "outputs/dpo-clarification",
+  "chat_template_file": "templates/retail_sdg_v2.jinja",
+  "beta": 0.1,
+  "learning_rate": 5e-06,
+  "epochs": 1,
+  "pairs_per_batch": 2,
+  "gradient_accumulation_steps": 8,
+  "eval_steps": 5,
+  "score_chunk_size": 16,
+  "max_grad_norm": 1.0,
+  "seed": 42,
+  "device": "cuda",
+  "precision": "bf16",
+  "wandb_project": "tau2-retail",
+  "wandb_mode": "online"
+}

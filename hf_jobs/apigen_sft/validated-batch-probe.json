@@ -1,0 +1,14 @@
+{
+  "source_job": "6af855ff23985fb9cd820c2e",
+  "selected": {
+    "batch_size": 8,
+    "free_before_model_gib": 43.9681396484375,
+    "total_gpu_gib": 44.39215087890625,
+    "status": "ok",
+    "train_loss": 1.5057322978973389,
+    "peak_allocated_gib": 35.208858013153076,
+    "peak_reserved_gib": 38.369140625,
+    "step_time_seconds": 32.86765
+  },
+  "max_context_tokens": 8182
+}

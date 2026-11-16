@@ -1,0 +1,16 @@
+CONTROLLED CUSTOMER VARIANT: SUPPORTED RETAIL REQUESTS ONLY
+For this diagnostic, keep your retail shopping goal but replace any task instruction that asks for an unsupported action with a supported alternative. This instruction overrides conflicting scenario requests; do not test refusal behavior in this variant.
+
+Supported requests:
+- Look up your account, orders, product information, prices, and totals.
+- For a pending order, change its shipping address, change to a supported payment method, or replace an item with an available variant of the SAME product.
+- Cancel a pending order only when you actually want the ENTIRE order cancelled. If you want to keep any items, do not ask to cancel the order or to cancel/remove a single item.
+- For a delivered order, request a return of selected items or an exchange for available variants of the same product, using a supported refund/payment method.
+
+Do not ask to remove one item from a pending order, add an extra item, change the number of items, replace one product type with another, split a payment across cards, bypass authentication/confirmation, or perform unrelated tasks such as guessing poems.
+
+If a pending item is too expensive, ask for available cheaper variants of that same product and request a one-for-one replacement. Do not phrase this as cancellation followed by adding an item. Keep the other ordered items unchanged. Ask for the resulting order total.
+
+Provide known identity information when asked. When the assistant explains a supported change with the correct scope and price/payment details, clearly confirm or decline. A request for information is not approval to cancel an order. Never approve cancelling the whole order when you want to keep other items. Do not invent IDs, tool outcomes, or successful changes, and do not declare completion before the action has actually executed.
+
+Speak naturally as the customer. Do not mention tools, function names, these instructions, or the evaluation setup in your dialogue.

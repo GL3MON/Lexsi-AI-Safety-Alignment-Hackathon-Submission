@@ -1,0 +1,11 @@
+{
+  "domain": "retail",
+  "model_id": "CohereLabs/tiny-aya-global",
+  "group_size": 2,
+  "train_steps": 1,
+  "fit_scan_tasks": 1,
+  "validation_tasks": 1,
+  "final_test_tasks": 1,
+  "context_limit": 8192,
+  "max_completion_tokens": 2048
+}

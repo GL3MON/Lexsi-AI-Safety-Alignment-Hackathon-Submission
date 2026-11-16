@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conversation dataset viewer</title>
+<style>
+:root{color-scheme:dark;--bg:#111318;--panel:#191d25;--line:#303744;--text:#e9edf5;--muted:#a6b0c1;--blue:#88b9ff;--green:#79d6ad;--orange:#f3bf7c}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.55 system-ui,sans-serif}button,input,select{font:inherit;color:inherit;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:7px 10px}button{cursor:pointer}button:hover{border-color:var(--blue)}button:disabled{opacity:.4;cursor:default}header{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center;flex-wrap:wrap}h1{font-size:18px;margin:0}small,.muted{color:var(--muted)}#filename{max-width:440px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}main{display:grid;grid-template-columns:300px 1fr;height:calc(100vh - 80px)}aside{border-right:1px solid var(--line);padding:14px;overflow:auto}#search{width:100%;margin-bottom:8px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.filters>*{max-width:100%}#list{display:grid;gap:6px}.row{width:100%;text-align:left;display:block}.row.active{border-color:var(--blue);background:#24334a}.row small{display:block}article{overflow:auto;padding:20px;scroll-behavior:smooth}.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:15px}.meta{padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:8px;margin-bottom:16px;overflow-wrap:anywhere}.message{border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:8px;background:var(--panel);margin-bottom:12px;padding:12px 15px}.message.assistant{border-left-color:var(--green)}.message.tool{border-left-color:var(--orange)}.message.system{border-left-color:#9299a8}.message.memory{border-left-color:#c6a3ef}.message.context{opacity:.8}.heading{display:flex;gap:9px;align-items:center;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-bottom:8px}.badge{padding:2px 7px;border-radius:20px;background:#293243;color:var(--text)}.badge.target{color:var(--green)}.badge.mask{color:var(--orange)}pre,.prose{white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;margin:8px 0}.prose{font-family:inherit}pre{font:12px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;background:var(--bg);border-radius:6px;padding:10px;max-height:550px;overflow:auto}summary{cursor:pointer;color:var(--muted)}.block{margin:8px 0}.block summary{color:var(--orange)}#empty{text-align:center;margin:12vh auto;max-width:530px;color:var(--muted)}#error{color:#ffb4b4;white-space:pre-wrap}label{cursor:pointer}input[type=checkbox]{accent-color:var(--blue)}body.drag{outline:3px dashed var(--blue);outline-offset:-8px}a{color:var(--blue)}#stats{margin:8px 0 12px;color:var(--muted)}@media(max-width:750px){main{grid-template-columns:190px 1fr}aside{padding:8px}article{padding:10px}header{padding:10px}#filename{max-width:200px}}
+</style></head><body>
+<header><h1>Conversation viewer</h1><button id="open">Open JSONL / JSON</button><input id="file" type="file" accept=".jsonl,.json,.txt" hidden><span id="filename" class="muted">No file loaded</span><small>Local browser processing · no uploads</small></header>
+<main><aside><input id="search" placeholder="Search conversations…" aria-label="Search conversations"><div class="filters"><select id="task" aria-label="Task"><option value="">All tasks</option></select><select id="kind" aria-label="Example type"><option value="">All types</option></select></div><div id="stats"></div><nav id="list" aria-label="Conversations"></nav></aside>
+<article id="article"><div class="toolbar"><button id="prev">← Previous</button><button id="next">Next →</button><span id="position" class="muted"></span><button id="download">Download record</button><button id="copy">Copy messages</button><label><input id="targets" type="checkbox"> Targets only</label><label><input id="expand" type="checkbox"> Expand system / results</label></div><div id="error" role="alert"></div><section id="record"></section><div id="empty"><h2>Drop a dataset here</h2><p>One {"messages": […]} record per JSONL line, a JSON array of records, or one saved episode. Supports tagged tool calls, memory messages, and SFT loss-message indices.</p></div></article></main>
+<script id="embedded-data" type="application/json">null</script>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const el=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e};
+let rows=[],indices=[],current=-1,searchable=[],fileName='dataset';
+function normalize(value){
+ if(Array.isArray(value)){
+  if(value.length&&value.every(x=>x&&typeof x.role==='string'))return [{messages:value}];
+  return value;
+ }
+ if(value&&Array.isArray(value.messages))return [value];
+ if(value&&Array.isArray(value.conversations))return [{...value,messages:value.conversations.map(m=>({role:({human:'user',gpt:'assistant',system:'system'}[m.from]||m.from||m.role),content:m.value??m.content??''}))}];
+ throw new Error('Expected a conversation with a messages array.');
+}
+function parseFile(text){
+ try{return normalize(JSON.parse(text));}catch(error){
+  const lines=text.split(/\r?\n/),result=[];let firstError=null;
+  lines.forEach((line,i)=>{if(!line.trim())return;try{result.push(...normalize(JSON.parse(line)))}catch(e){if(!firstError)firstError=new Error('Line '+(i+1)+': '+e.message)}});
+  if(firstError)throw firstError;
+  return result;
+ }
+}
+function load(data,name){
+ if(!data.length)throw new Error('No conversations found.');
+ const invalid=data.findIndex(r=>!r||!Array.isArray(r.messages));
+ if(invalid>=0)throw new Error('Record '+(invalid+1)+' has no messages array.');
+ rows=data;fileName=name;searchable=rows.map(r=>JSON.stringify(r).toLowerCase());current=-1;
+ $('filename').textContent=name+' · '+rows.length+' conversations';$('error').textContent='';
+ for(const [id,key] of [['task','task_id'],['kind','example_type']]){
+  const select=$(id);while(select.options.length>1)select.remove(1);
+  [...new Set(rows.map(r=>r[key]).filter(x=>x!==undefined&&x!==null).map(String))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true})).forEach(v=>{const o=el('option',v);o.value=v;select.append(o)});
+  select.value='';
+ }
+ $('search').value='';filter();
+ const hash=new URLSearchParams(location.hash.slice(1));const n=Number(hash.get('row'));
+ if(hash.has('row')&&indices.includes(n))choose(n);
+}
+function filter(){
+ const query=$('search').value.toLowerCase().trim(),task=$('task').value,kind=$('kind').value;
+ indices=rows.flatMap((r,i)=>(!query||searchable[i].includes(query))&&(!task||String(r.task_id)===task)&&(!kind||String(r.example_type)===kind)?[i]:[]);
+ $('stats').textContent=indices.length+' / '+rows.length+' conversations';
+ if(!indices.includes(current))current=indices[0]??-1;
+ list();render();
+}
+function list(){
+ const fragment=document.createDocumentFragment();
+ for(const i of indices){const r=rows[i],b=el('button',undefined,'row'+(i===current?' active':''));
+  b.append(el('span','#'+(i+1)+(r.task_id!==undefined?' · Task '+r.task_id:'')));
+  b.append(el('small',r.example_type||r.partition||(r.id!=null?String(r.id).slice(0,15):'')||r.messages.length+' messages'));
+  b.onclick=()=>choose(i);fragment.append(b);
+ }
+ $('list').replaceChildren(fragment);
+}
+function choose(i){current=i;history.replaceState(null,'','#row='+i);list();render();$('article').scrollTop=0;}
+function formatted(value){if(typeof value!=='string')return JSON.stringify(value,null,2);try{return JSON.stringify(JSON.parse(value),null,2)}catch{return value}}
+function detail(parent,title,content,open=false){const d=el('details',undefined,'block');d.open=open;d.append(el('summary',title),el('pre',formatted(content)));parent.append(d);}
+function contentBlocks(parent,content){
+ const text=typeof content==='string'?content:JSON.stringify(content,null,2);
+ const re=/<(tool_call|tool_response|memory)>\s*([\s\S]*?)\s*<\/\1>/g;let last=0,m;
+ while((m=re.exec(text))){if(m.index>last)parent.append(el('div',text.slice(last,m.index),'prose'));
+  let title=m[1].replaceAll('_',' ');try{const parsed=JSON.parse(m[2]);if(parsed.name)title+=' · '+parsed.name}catch{title+=' · unparsed content'}
+  detail(parent,title,m[2],m[1]==='tool_call'||$('expand').checked);last=re.lastIndex;
+ }
+ if(last<text.length)parent.append(el('div',text.slice(last),'prose'));
+}
+function render(){
+ const r=rows[current],container=$('record');container.replaceChildren();$('empty').hidden=!!r;
+ const p=indices.indexOf(current);$('position').textContent=r?(p+1)+' / '+indices.length:'';
+ $('prev').disabled=p<=0;$('next').disabled=p<0||p>=indices.length-1;$('download').disabled=!r;$('copy').disabled=!r;
+ if(!r)return;
+ const mask=Array.isArray(r.loss_message_indices)?new Set(r.loss_message_indices):null;
+ const metadata=el('div',undefined,'meta');
+ const fields=['task_id','partition','example_type','student_tokens','supervised_tokens','source_terminal_reward','customer_profile','reward','complete'];
+ const actualMask=mask?mask.size+' supervised assistant turns':'Loss-message metadata not provided';
+ metadata.append(el('strong','Record #'+(current+1)),el('div',actualMask));
+ for(const key of fields)if(r[key]!==undefined)metadata.append(el('div',key+': '+String(r[key])));
+ detail(metadata,'Record metadata (excluding messages)',Object.fromEntries(Object.entries(r).filter(([k])=>k!=='messages')));
+ container.append(metadata);
+ r.messages.forEach((m,i)=>{
+  const original=m.role||'unknown',content=m.content??'',text=typeof content==='string'?content:JSON.stringify(content);
+  const result=original==='tool'||(original==='user'&&text.trimStart().startsWith('<tool_response>'));
+  const memory=original==='user'&&text.includes('<memory>');
+  const role=result?'tool':memory?'memory':original;
+  const supervised=mask?mask.has(i):null;
+  if($('targets').checked&&!(original==='assistant'&&(mask?supervised:true)))return;
+  const card=el('div',undefined,'message '+role+(supervised===false?' context':''));
+  const heading=el('div',undefined,'heading');heading.append(el('strong',role.toUpperCase()),el('span','message '+i));
+  if(result&&original!=='tool')heading.append(el('span','stored role: '+original));
+  if(Array.isArray(r.source_message_indices))heading.append(el('span','source '+r.source_message_indices[i]));
+  if(mask)heading.append(el('span',supervised?'TRAINING TARGET':'CONTEXT · MASKED','badge '+(supervised?'target':'mask')));
+  card.append(heading);
+  let body=card;
+  if(role==='system'||result||memory){const d=el('details');d.open=$('expand').checked;d.append(el('summary',text.length.toLocaleString()+' characters · expand'));card.append(d);body=d;}
+  if(content)contentBlocks(body,content);
+  for(const call of m.tool_calls||[]){const f=call.function||call;detail(body,'tool call · '+(f.name||'unknown'),{name:f.name,arguments:typeof f.arguments==='string'?(()=>{try{return JSON.parse(f.arguments)}catch{return f.arguments}})():f.arguments},true)}
+  if(m.name)body.append(el('small','Tool: '+m.name));
+  detail(body,'Exact raw message',m);
+  container.append(card);
+ });
+}
+async function openFile(file){if(!file)return;try{load(parseFile(await file.text()),file.name)}catch(e){$('error').textContent=e.message;}}
+$('open').onclick=()=>$('file').click();$('file').onchange=e=>openFile(e.target.files[0]);
+let timer;$('search').oninput=()=>{clearTimeout(timer);timer=setTimeout(filter,150)};
+$('task').onchange=filter;$('kind').onchange=filter;$('targets').onchange=render;$('expand').onchange=render;
+$('prev').onclick=()=>choose(indices[indices.indexOf(current)-1]);$('next').onclick=()=>choose(indices[indices.indexOf(current)+1]);
+$('download').onclick=()=>{if(!rows[current])return;const a=el('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(rows[current],null,2)],{type:'application/json'}));a.download='conversation-'+(current+1)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+$('copy').onclick=async()=>{try{await navigator.clipboard.writeText(JSON.stringify(rows[current].messages,null,2));$('copy').textContent='Copied';setTimeout(()=>$('copy').textContent='Copy messages',1200)}catch{$('error').textContent='Clipboard unavailable in this browser context. Use Download record instead.'}};
+window.addEventListener('dragover',e=>{e.preventDefault();document.body.classList.add('drag')});
+window.addEventListener('dragleave',e=>{if(!e.relatedTarget)document.body.classList.remove('drag')});
+window.addEventListener('drop',e=>{e.preventDefault();document.body.classList.remove('drag');openFile(e.dataTransfer.files[0])});
+window.addEventListener('keydown',e=>{if(['INPUT','SELECT','TEXTAREA'].includes(document.activeElement.tagName))return;if(e.key==='ArrowRight'&&!$('next').disabled)$('next').click();if(e.key==='ArrowLeft'&&!$('prev').disabled)$('prev').click()});
+try{const data=JSON.parse($('embedded-data').textContent);if(data)load(data.records,data.name);else render()}catch(e){$('error').textContent=e.message;}
+</script></body></html>

@@ -1,0 +1,81 @@
+You generate short, grounded retail support conversations for supervised fine-tuning.
+
+GOAL
+Produce clarification-focused examples that teach the agent WHEN to ask, WHAT to ask, and WHEN TO STOP ASKING. The agent must not invent tool arguments, repeat answered questions, or treat a statement of intent as a completed tool action.
+
+INPUT PROVIDED BY THE GENERATION DRIVER
+- sample_id and split
+- scenario_category and requested_variant
+- original retail policy
+- exact tool schemas and tool-call serialization rules
+- grounded scenario facts: customer identity, account/order/item observations, customer intent, and any required action confirmation
+- customer-private facts, marked separately from facts visible to the agent
+- optional starting conversation
+
+Treat the original policy and schemas as authoritative. Do not invent tool names, required arguments, authentication requirements, or extra prerequisites. Private customer facts become usable by the agent only after the customer states them or an authorized tool exposes them. Schema examples are never evidence about the customer.
+
+OUTPUT
+Return exactly one JSON object, without Markdown fences:
+{
+  "sample_id": "<provided sample_id>",
+  "scenario_category": "<provided category>",
+  "variant": "ask_then_act | ready_to_act | partial_answer",
+  "messages": [
+    {"role": "user", "content": "..."},
+    {"role": "assistant", "content": "..."}
+  ],
+  "target_message_indices": [1],
+  "provenance": {
+    "required_fields": ["..."],
+    "initially_missing_fields": ["..."],
+    "argument_sources": [{"field": "...", "message_index": 0, "evidence": "..."}]
+  }
+}
+The driver, not you, attaches the original system prompt, policy, and tool definitions. Do not include provenance or scenario labels in message content. Indices are zero-based in the returned messages, before the driver adds any prefix. The driver must remap target indices when attaching a prefix.
+
+Every assistant turn is a target. User and tool turns are never targets. For every tool call, include one short plain-language sentence explaining the intended action, immediately followed by the exact supplied tool-call block in the SAME assistant message. This overrides any tool-only formatting instruction in the supplied source. Do not claim completed success. The driver must add the same format override to the training system prompt. Use the exact supplied production serialization for tool observations. Do not introduce a new tool protocol. Do not fabricate successful tool observations: if continuation needs one, request execution through the driver; return an example ending at the grounded tool call unless the input supplies the actual observation.
+
+VARIANTS
+1. ask_then_act: Begin with a request missing required information. Ask one concise question covering only missing fields. The customer supplies the information naturally. The agent immediately makes the appropriate grounded tool call when prerequisites are satisfied. End at that call. Usually 4 messages; a supplied earlier tool error may extend the context.
+2. ready_to_act: All prerequisites are already visible in the supplied context. The agent immediately calls the appropriate tool, without asking again. Usually 2 messages plus any supplied history. Never use private facts as visible context.
+3. partial_answer: The customer answers only part of the clarification. Ask only for the remaining required fields. The customer supplies them; the agent then calls the tool. Usually 6 messages plus supplied history. The second clarification must not repeat fields already answered.
+
+SCENARIO CATEGORIES
+- Missing email: ask for email before email lookup. Do not use a plausible-looking guess or a schema example email.
+- Email unavailable: switch to the supported name/ZIP lookup. Request only missing fields required by its actual schema. Do not demand an email after the customer says it is unavailable.
+- Partial identity: first name, last name, ZIP, or email appears across separate turns. Accumulate those facts accurately. A shipping-change ZIP is not automatically an identity ZIP.
+- Failed lookup: include a supplied actual failed lookup and its observation. Ask for a correction or supported alternative. Once corrected, call with the corrected facts. Do not repeat unchanged failed arguments.
+- Ambiguous order/item: ask a disambiguating question only when the visible account/order observations leave multiple valid candidates. If no order ID is known, use supported account/order retrieval after authentication; do not demand an ID the customer cannot know.
+- Missing action-specific field: ask for a value required by the actual action schema/policy, such as an allowed replacement variant or refund destination where required. Never add unrelated requirements.
+- Confirmation: explain a grounded, specific state-changing plan and request confirmation when required. Once explicitly confirmed, execute that exact plan without asking again. If scope changes, clarify and obtain confirmation for the new scope. A vague acknowledgment is not automatically approval.
+
+QUALITY RULES
+- Preserve the original customer goal and every unresolved item; do not rewrite the task to make the example easier.
+- Follow the original retail policy. Do not promise an unsupported exchange or action.
+- Use exact observed identifiers and preserve ownership/order/item relationships.
+- Prefer concise natural language. Avoid boilerplate, long policy recitations, and identical phrasing across examples.
+- No repeated clarification after a complete answer. No extra read calls after an unchanged successful result without a concrete reason.
+- Never claim authentication, account retrieval, cancellation, exchange, return, or refund succeeded without the corresponding successful tool observation.
+- A statement such as "I can look you up" is not a tool call. The final action must use the actual tool-call protocol.
+- Keep customer dialogue and tool observations separate. The brief intent sentence belongs in the same assistant message as its tool call; never generate a separate customer response between them.
+- If required facts or tools are absent from the supplied scenario, return {"sample_id":"<provided id>","error":"insufficient_grounded_input","missing":["..."]}. Do not fill gaps with invented evidence.
+- Keep examples short: target 2–6 new conversational messages, excluding supplied history. Do not pad examples to a token budget.
+
+BATCH ALLOCATION (ENFORCED BY DRIVER, NOT BY ONE MODEL RESPONSE)
+Generate 2,000 accepted examples total:
+                                   ask_then_act  ready_to_act  partial_answer  total
+Missing email                           180           80              40       300
+Email unavailable                       180           80              40       300
+Partial identity                        180           80              40       300
+Failed lookup                           180           80              40       300
+Ambiguous order/item                    150           70              30       250
+Missing action-specific field           150           70              30       250
+Confirmation                            180           80              40       300
+TOTAL                                 1,200          540             260     2,000
+
+The ready_to_act examples are essential contrast cases within this clarification curriculum: they teach that a question is unnecessary once the answer is known. Do not replace them with additional questions.
+
+The driver must assign scenario-family-disjoint train/validation partitions before generation: reserve 10% of each category/variant cell (200 validation, 1,800 training). Keep all paired variants, entity substitutions, and descendants of the same original task in one partition. For existing reserved Tau2 tasks, preserve their existing partition instead of reassigning them. Do not use reserved RL/test tasks for training. Meet exact cell counts only using eligible scenario families; fail explicitly if reservations make a quota impossible.
+
+DRIVER ACCEPTANCE CHECKS
+Validate JSON and message roles; remap all assistant target indices; validate tool names and argument schemas; verify argument provenance against agent-visible facts; require actual failed-lookup evidence where used; reject repeated answered questions and unsupported success claims. Deduplicate normalized conversations and scenario families across splits. Track rejected candidates and regenerate within the same allocated cell until 2,000 examples pass. A model-written provenance field is a claim to verify, not proof. Execute supported tool calls against the scenario database where available. Never silently replace missing execution checks with assumed success.

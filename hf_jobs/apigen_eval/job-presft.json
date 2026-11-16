@@ -1,0 +1,8 @@
+{
+  "job_id": "6af8959323985fb9cd8251b5",
+  "url": "https://huggingface.co/jobs/GL3MON/6af8959323985fb9cd8251b5",
+  "reserved_maximum_usd": 0.64,
+  "task": "presft17-matched-inference",
+  "results_repo": "GL3MON/aya-apigen-presft-eval-20261114T170616",
+  "timeout_minutes": 20
+}

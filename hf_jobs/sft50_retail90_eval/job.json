@@ -1,0 +1,26 @@
+{
+  "account": "notGL3MON",
+  "task": "sft50-retail90-eval",
+  "inference_only": true,
+  "checkpoint": "Diagnostic SFT50",
+  "case_count": 90,
+  "worlds": [
+    80,
+    85,
+    86
+  ],
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "response_tokens": 192,
+  "max_actions": 4,
+  "baseline": "SFT19:57/90, clarification5/24, other52/66",
+  "timeout_minutes": 15,
+  "reserved_maximum_usd": 0.49,
+  "remaining_account_budget_usd": 17.04,
+  "checkpoint_bucket": "notGL3MON/tau2-retail-experiments",
+  "bucket_prefix": "sft50-retail90-eval-20261115T160716",
+  "hub_output_uploads": false,
+  "job_id": "6af9d8b429dd05ff0368e595",
+  "url": "https://huggingface.co/jobs/notGL3MON/6af9d8b429dd05ff0368e595",
+  "flavor": "l40sx1"
+}

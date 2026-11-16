@@ -1,0 +1,15 @@
+{
+  "id": "gl3mon/aya-retail-checkpoint150-tool-eval-20261114",
+  "title": "Aya Retail Checkpoint150 Tool Eval 20261114",
+  "code_file": "evaluate.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_internet": "true",
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": ["gl3mon/tiny-aya-retail-checkpoint150-eval"],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

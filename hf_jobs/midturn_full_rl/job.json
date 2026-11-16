@@ -1,0 +1,31 @@
+{
+  "account": "notGL3MON",
+  "task": "midturn-full-rl",
+  "inference_only": false,
+  "groups": 100,
+  "rollouts_per_group": 16,
+  "mix": {
+    "midturn": 0.6,
+    "opening_clarification": 0.2,
+    "retention": 0.2
+  },
+  "checkpoint": "Midturn pilot checkpoint-6",
+  "validation_cases": 114,
+  "validation_every_groups": 30,
+  "temperature": 0.7,
+  "top_p": 1.0,
+  "response_tokens": 192,
+  "max_actions": 4,
+  "baseline": "Pilot checkpoint-6:30/38; expanded paired validation is run before training",
+  "timeout_minutes": 180,
+  "reserved_maximum_usd": 5.44,
+  "remaining_account_budget_usd": 11.01,
+  "checkpoint_bucket": "notGL3MON/tau2-retail-experiments",
+  "bucket_prefix": "midturn-full-rl-20261115T173756",
+  "hub_output_uploads": false,
+  "job_id": "6af9edf523985fb9cd839302",
+  "url": "https://huggingface.co/jobs/notGL3MON/6af9edf523985fb9cd839302",
+  "flavor": "l40sx1",
+  "requested_stop_after_groups": 20,
+  "stop_watcher_pid": 1900641
+}

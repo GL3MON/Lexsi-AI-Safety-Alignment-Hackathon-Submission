@@ -1,0 +1,9 @@
+{
+  "train": 128,
+  "validation": 16,
+  "source": "retail-sdg-v2-strict-clean; original splits preserved",
+  "selection": "Before first tool: supervised request for identity details, followed by supplied values and first correct tool call",
+  "initial_checkpoint": 50,
+  "system_prompt": "Unmodified Salesforce evaluation system; no added anti-invention rule",
+  "seed": 42
+}

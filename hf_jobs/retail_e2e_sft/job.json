@@ -1,0 +1,33 @@
+{
+  "account": "notGL3MON",
+  "task": "retail-e2e-sft",
+  "initial_checkpoint": "Post20 checkpoint-7",
+  "initial_adapter_sha256": "210d9192cfad7e5fb999d70fc2e356a8af88788e10d21865fb7d9a95dc43a983",
+  "train_examples": 599,
+  "validation_examples": 104,
+  "epochs": 2,
+  "batch_size": 8,
+  "gradient_accumulation_steps": 2,
+  "estimated_optimizer_steps": 76,
+  "learning_rate": 2e-05,
+  "eval_steps": 10,
+  "save_total_limit": 2,
+  "max_context": 8192,
+  "post_training_rollout": {
+    "task_id": "69",
+    "unassisted": true,
+    "temperature": 0.0
+  },
+  "timeout_minutes": 90,
+  "reserved_maximum_usd": 2.74,
+  "remaining_account_budget_usd": 2.55,
+  "checkpoint_bucket": "notGL3MON/tau2-retail-experiments",
+  "bucket_prefix": "retail-e2e-sft-20261115T212705",
+  "hub_output_uploads": false,
+  "then_exit": true,
+  "followup_queued": "assisted RL watcher after checkpoint and rollout validation",
+  "job_id": "6afa23b123985fb9cd83c1eb",
+  "url": "https://huggingface.co/jobs/notGL3MON/6afa23b123985fb9cd83c1eb",
+  "flavor": "l40sx1",
+  "data_archive_sha256": "9398e84f9827f51a4614788b7af1d77520e1b8651b9c255752515ea1dc9406f2"
+}

@@ -1,0 +1,9 @@
+{
+  "reason": "User requested switch to native Tau2 curriculum RL",
+  "job_id": "6afa014923985fb9cd83a2e1",
+  "retained_checkpoints": [
+    "medium-rl-20261115T190019/training/training/checkpoint-3/COMPLETE",
+    "medium-rl-20261115T190019/training/training/checkpoint-4/COMPLETE"
+  ],
+  "new_initializer": "Post20 checkpoint-7; medium run weights not used"
+}

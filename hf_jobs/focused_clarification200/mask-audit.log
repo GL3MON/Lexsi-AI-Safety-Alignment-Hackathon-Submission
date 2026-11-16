@@ -1,0 +1,5 @@
+AUDIT 50
+AUDIT 100
+AUDIT 150
+AUDIT 200
+{"records": 224, "max_tokens": 5260, "supervised_tokens": 12460, "masked_assistant_turns": 709, "supervised_assistant_turns": 336, "assistant_only_selected_masks_verified": true}

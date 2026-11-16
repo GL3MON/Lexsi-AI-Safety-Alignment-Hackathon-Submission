@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tau2-agenttune-grpo"
+version = "0.1.0"
+description = "AlignTune SFT and turn-aware GRPO with Tau2 retail and telecom rollouts"
+requires-python = ">=3.12,<3.14"
+dependencies = []
+
+[project.scripts]
+tau2-grpo = "tau2_grpo.cli:main"
+tau2-sft = "tau2_grpo.sft:main"
+tau2-retail-rl = "tau2_grpo.rl:main"
+tau2-retail-opsd = "tau2_grpo.opsd_retail:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 88

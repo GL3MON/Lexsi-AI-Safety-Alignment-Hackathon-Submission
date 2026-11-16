@@ -1,0 +1,17 @@
+{
+  "account": "notGL3MON",
+  "task": "assisted-rl-checkpoint2-retail-eval",
+  "inference_only": true,
+  "checkpoint_job": "6afa878f29dd05ff0369b43e",
+  "checkpoint": "assisted-after-e2e-20261116T043318/training/training/checkpoint-2/policy",
+  "baseline": "midturn-full-rl-20261115T173756/training/training/checkpoint-7/policy",
+  "validation_cases": 114,
+  "native_tau2": false,
+  "timeout_minutes": 46,
+  "reserved_maximum_usd": 1.39,
+  "checkpoint_bucket": "notGL3MON/tau2-retail-experiments",
+  "bucket_prefix": "assisted-rl-checkpoint2-eval-20261116T084321",
+  "job_id": "6afac22a23985fb9cd845b46",
+  "url": "https://huggingface.co/jobs/notGL3MON/6afac22a23985fb9cd845b46",
+  "flavor": "l40sx1"
+}

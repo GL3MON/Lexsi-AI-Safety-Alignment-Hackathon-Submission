@@ -1,0 +1,21 @@
+{
+  "base_config": "configs/rl-retail.json",
+  "output_dir": "outputs/opsd-retail-smoke",
+  "max_actions": 8,
+  "collection_rollouts_per_task": 2,
+  "max_candidates": 8,
+  "max_hints_per_instance": 3,
+  "preservation_actions_per_task": 1,
+  "hint_temperature": 0.0,
+  "hint_max_tokens": 384,
+  "recovery_max_actions": 8,
+  "recovery_weight": 1.0,
+  "preservation_weight": 0,
+  "epochs_per_round": 1,
+  "eval_rollouts_per_task": 1,
+  "agent_prompt_file": "templates/glaive_decision_rules.txt",
+  "wandb_project": "tau2-retail-opsd",
+  "wandb_mode": "online",
+  "mode": "hint",
+  "learning_rate": 2e-07
+}

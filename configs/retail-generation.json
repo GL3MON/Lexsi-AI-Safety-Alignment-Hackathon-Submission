@@ -1,0 +1,38 @@
+{
+  "model": "Qwen/Qwen3.5-4B",
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "base_url": "http://127.0.0.1:8004/v1",
+  "served_model_name": "qwen3.5-4b",
+  "roles": [
+    "teacher_agent",
+    "customer_simulator"
+  ],
+  "same_model_separate_conversation_contexts": true,
+  "split_manifest": "outputs/retail-data/split_manifest.json",
+  "accepted_sft_conversations_per_task": 3,
+  "minimum_terminal_reward": 1.0,
+  "require_policy_review": true,
+  "api_mode": "chat",
+  "enable_thinking": false,
+  "context_limit": 16384,
+  "serving": {
+    "vllm_version": "0.17.1",
+    "device": "MIG2",
+    "dtype": "bfloat16",
+    "language_model_only": true,
+    "offload_backend": "prefetch",
+    "offload_group_size": 2,
+    "offload_num_in_group": 1,
+    "offload_prefetch_step": 1,
+    "gpu_memory_utilization": 0.3,
+    "max_num_batched_tokens": 528,
+    "cudagraph_mode": "FULL_DECODE_ONLY",
+    "gdn_prefill_backend": "bundled_triton_fla"
+  },
+  "dataset_output": "outputs/retail-data/qwen-sft-fixed",
+  "generation_fix_version": "retail-gen-v3",
+  "user_temperature": 0.0,
+  "customer_stop_guard": "confirmation_approval_v1",
+  "nl_assertions_backend": "local_qwen_complete_coverage",
+  "overlength_mode": "intact_assistant_prefix"
+}

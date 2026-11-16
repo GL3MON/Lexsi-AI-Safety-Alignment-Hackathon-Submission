@@ -1,0 +1,12 @@
+{
+  "input_repo": "GL3MON/tau2-retail-rl-job-input",
+  "result_repo": "GL3MON/tau2-retail-rl-job-results",
+  "payload_sha256": "32321825682e8e05c2bd0b4b166feea67e77ab7d5eeef9ee6beab57367591e66",
+  "payload_bytes": 141829689,
+  "initial_checkpoint": 100,
+  "base_model": "GL3MON/tiny-aya-global-function-calling-sft",
+  "base_revision": "df7ccd20bf3e5234bfbe7507821a5ca6ce814a2a",
+  "contains_credentials": false,
+  "compute_launched": false
+}
+Private payload uploaded. No compute job submitted.

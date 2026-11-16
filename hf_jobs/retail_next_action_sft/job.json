@@ -1,0 +1,14 @@
+{
+  "job_id": "6af8b2c623985fb9cd82709e",
+  "url": "https://huggingface.co/jobs/GL3MON/6af8b2c623985fb9cd82709e",
+  "reserved_maximum_usd": 0.94,
+  "task": "retail-next-action480-from50",
+  "results_repo": "GL3MON/aya-retail-next-action480-20261114T191241",
+  "timeout_minutes": 30,
+  "initial_checkpoint": 50,
+  "train_samples": 432,
+  "validation_samples": 48,
+  "batch_size": 8,
+  "gradient_accumulation_steps": 1,
+  "optimizer_steps": 54
+}

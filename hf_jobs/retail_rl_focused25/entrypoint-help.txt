@@ -1,0 +1,19 @@
+usage: rl.py [-h] [--config CONFIG] [--task-id TASK_ID]
+             [--actor {retail_sft,function_calling_base}]
+             [--partition {rl,validation,test}] [--output OUTPUT]
+             [--set KEY=JSON]
+             {check,collect,compare,train}
+
+Retail Tau2 collection, paired evaluation, and exact-context GRPO training.
+
+positional arguments:
+  {check,collect,compare,train}
+
+options:
+  -h, --help            show this help message and exit
+  --config CONFIG
+  --task-id TASK_ID
+  --actor {retail_sft,function_calling_base}
+  --partition {rl,validation,test}
+  --output OUTPUT
+  --set KEY=JSON

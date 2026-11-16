@@ -1,0 +1,70 @@
+_wandb:
+    value:
+        cli_version: 0.31.0
+        e:
+            01a1c6ec-8855-7042-9e5b-b6ddc97d2e02:
+                codePath: scripts/overfit_retail_clarifications.py
+                codePathLocal: scripts/overfit_retail_clarifications.py
+                cpu:
+                    model: Intel(R) Xeon(R) Gold 5418Y
+                cpu_count: 48
+                cpu_count_logical: 96
+                cudaVersion: "12.5"
+                disk:
+                    /:
+                        total: "9522803499008"
+                        used: "7959650721792"
+                email: harisshragavarchives@gmail.com
+                executable: /home/harishr/tau2-agenttune-grpo/.venv/bin/python
+                gpu: NVIDIA H100 PCIe
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Hopper
+                      name: NVIDIA H100 PCIe
+                      numaNode: 1
+                      pciBusId: 00000000:8A:00.0
+                      uuid: GPU-4bc7411c-d3d0-641f-18dc-c4c7c447ed83
+                host: 940e8c5d4563
+                memory:
+                    total: "270178398208"
+                os: Linux-5.15.0-113-generic-x86_64-with-glibc2.31
+                program: /home/harishr/tau2-agenttune-grpo/scripts/overfit_retail_clarifications.py
+                python: CPython 3.12.13
+                root: /home/harishr/tau2-agenttune-grpo
+                startedAt: "2026-11-10T19:25:52.592127Z"
+                writerId: 01a1c6ec-8855-7042-9e5b-b6ddc97d2e02
+        m: []
+        python_version: 3.12.13
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 49
+                - 53
+                - 71
+            "2":
+                - 1
+                - 5
+                - 11
+                - 49
+                - 53
+                - 71
+            "3":
+                - 2
+                - 13
+                - 16
+                - 78
+            "4": 3.12.13
+            "5": 0.31.0
+            "6": 5.17.0
+            "12": 0.31.0
+            "13": linux-x86_64
+adapter:
+    value: /home/harishr/tau2-agenttune-grpo/outputs/diagnostics/retail-clarification-overfit-v1/training/run-9fa34652c7/final_adapter
+control_examples:
+    value: 2
+controls_are_benchmark_holdout:
+    value: false
+fit_examples:
+    value: 3

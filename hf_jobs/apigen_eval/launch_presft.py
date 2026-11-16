@@ -1,0 +1,29 @@
+import json
+from pathlib import Path
+from datetime import datetime,timezone
+from huggingface_hub import HfApi,get_token
+root=Path(__file__).resolve().parents[2];api=HfApi()
+stamp=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S')
+input_repo='GL3MON/aya-apigen-presft-eval-input';result_repo='GL3MON/aya-apigen-presft-eval-'+stamp
+api.create_repo(input_repo,repo_type='dataset',private=True,exist_ok=True)
+api.create_repo(result_repo,repo_type='dataset',private=True)
+row=json.loads((root/'outputs/retail-data/apigen-mt-retail-sft/train.jsonl').open().readline())
+system=row['messages'][0]['content'];assert row['messages'][0]['role']=='system'
+for name,data in [('bootstrap.py',(root/'hf_jobs/apigen_eval/bootstrap_presft.py').read_bytes()),('evaluate.py',(root/'scripts/eval_retail_tool_generalization.py').read_bytes()),('system.txt',system.encode())]:
+    api.upload_file(repo_id=input_repo,repo_type='dataset',path_in_repo=name,path_or_fileobj=data)
+adapter=root/'outputs/rl-glaive/run-55f242da3a/checkpoint-17/policy'
+matched=root/'outputs/hf-jobs/6af8591d23985fb9cd820ff6/eval-snapshot/training/run-2a32064432/checkpoint-50'
+for name in ['adapter_config.json','adapter_model.safetensors','tokenizer.json','tokenizer_config.json','chat_template.jinja']:
+    source=(adapter if name.startswith('adapter_') else matched)/name
+    api.upload_file(repo_id=input_repo,repo_type='dataset',path_in_repo='checkpoint-17/'+name,path_or_fileobj=str(source))
+api.upload_file(repo_id=input_repo,repo_type='dataset',path_in_repo='checkpoint-17/trainer_state.json',path_or_fileobj=json.dumps({'global_step':17,'provenance':'Glaive RL run-55f242da3a checkpoint-17/policy; matched APIGen tokenizer/template for identical rendered test prompts'}).encode())
+hardware=next(h for h in api.list_jobs_hardware() if h.name=='l40sx1');assert hardware.unit_label=='minute'
+reserve=round(21*hardware.unit_cost_micro_usd/1e6+.01,2)
+ledger_file=root/'hf_jobs/retail_rl/artifacts/budget-ledger.json';ledger=json.loads(ledger_file.read_text())
+committed=sum(r.get('settled_maximum_usd',r['reserved_maximum_usd']) for r in ledger)
+if committed+reserve>15:raise RuntimeError(f'Protected reserve: committed={committed}, new={reserve}')
+command=['sh','-c','pip install -q huggingface_hub==1.33.0 && python -c "import os,runpy;from huggingface_hub import hf_hub_download;runpy.run_path(hf_hub_download(os.environ[\'EVAL_INPUT\'],\'bootstrap.py\',repo_type=\'dataset\'),run_name=\'__main__\')"']
+job=api.run_job(image='pytorch/pytorch:2.11.0-cuda12.6-cudnn9-runtime',command=command,flavor='l40sx1',timeout=1200,namespace='GL3MON',name='aya-apigen-presft17-inference',env={'EVAL_INPUT':input_repo,'EVAL_RESULTS':result_repo,'HF_HUB_DISABLE_PROGRESS_BARS':'1','PYTHONUNBUFFERED':'1','PIP_BREAK_SYSTEM_PACKAGES':'1'},secrets={'HF_TOKEN':get_token()})
+entry=dict(job_id=job.id,url=job.url,reserved_maximum_usd=reserve,task='presft17-matched-inference',results_repo=result_repo,timeout_minutes=20)
+ledger.append(entry);ledger_file.write_text(json.dumps(ledger,indent=2)+'\n')
+(root/'hf_jobs/apigen_eval/job-presft.json').write_text(json.dumps(entry,indent=2)+'\n');print(json.dumps(entry),flush=True)

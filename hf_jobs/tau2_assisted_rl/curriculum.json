@@ -1,0 +1,570 @@
+{
+  "version": "tau2-complexity-curriculum-v1",
+  "source": "Original reserved RL task IDs only",
+  "difficulty_note": "Static reference-action/check-count proxy, not measured task difficulty",
+  "ranked_tasks": [
+    {
+      "task_id": "85",
+      "complexity": 3,
+      "reference_actions": 1,
+      "write_actions": 1,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "task_id": "105",
+      "complexity": 4,
+      "reference_actions": 1,
+      "write_actions": 1,
+      "nl_checks": 1,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "task_id": "96",
+      "complexity": 6,
+      "reference_actions": 2,
+      "write_actions": 2,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "task_id": "1",
+      "complexity": 7,
+      "reference_actions": 5,
+      "write_actions": 1,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "task_id": "91",
+      "complexity": 7,
+      "reference_actions": 2,
+      "write_actions": 2,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "task_id": "99",
+      "complexity": 7,
+      "reference_actions": 2,
+      "write_actions": 2,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "task_id": "6",
+      "complexity": 8,
+      "reference_actions": 6,
+      "write_actions": 1,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "task_id": "10",
+      "complexity": 8,
+      "reference_actions": 5,
+      "write_actions": 1,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "task_id": "13",
+      "complexity": 8,
+      "reference_actions": 5,
+      "write_actions": 1,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "task_id": "37",
+      "complexity": 8,
+      "reference_actions": 4,
+      "write_actions": 1,
+      "nl_checks": 2,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "task_id": "44",
+      "complexity": 8,
+      "reference_actions": 5,
+      "write_actions": 1,
+      "nl_checks": 1,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "task_id": "113",
+      "complexity": 8,
+      "reference_actions": 2,
+      "write_actions": 2,
+      "nl_checks": 1,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "task_id": "48",
+      "complexity": 10,
+      "reference_actions": 6,
+      "write_actions": 1,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 3
+    },
+    {
+      "task_id": "78",
+      "complexity": 10,
+      "reference_actions": 3,
+      "write_actions": 3,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "task_id": "112",
+      "complexity": 10,
+      "reference_actions": 3,
+      "write_actions": 3,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "task_id": "14",
+      "complexity": 11,
+      "reference_actions": 6,
+      "write_actions": 2,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "task_id": "19",
+      "complexity": 12,
+      "reference_actions": 7,
+      "write_actions": 1,
+      "nl_checks": 2,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "task_id": "35",
+      "complexity": 12,
+      "reference_actions": 7,
+      "write_actions": 2,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "task_id": "59",
+      "complexity": 12,
+      "reference_actions": 5,
+      "write_actions": 2,
+      "nl_checks": 2,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "task_id": "103",
+      "complexity": 15,
+      "reference_actions": 4,
+      "write_actions": 4,
+      "nl_checks": 1,
+      "env_checks": 0,
+      "distinct_orders": 3
+    }
+  ],
+  "deferred_tasks": [
+    {
+      "task_id": "30",
+      "complexity": 23,
+      "reference_actions": 13,
+      "write_actions": 3,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 5
+    },
+    {
+      "task_id": "54",
+      "complexity": 24,
+      "reference_actions": 12,
+      "write_actions": 3,
+      "nl_checks": 1,
+      "env_checks": 0,
+      "distinct_orders": 6
+    }
+  ],
+  "deferral_reason": "Reference requires more than 8 tool actions; defer under current 10-actor-action cap",
+  "schedule": [
+    {
+      "group": 0,
+      "stage": "easy",
+      "retention": false,
+      "task_id": "85",
+      "complexity": 3,
+      "reference_actions": 1,
+      "write_actions": 1,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "group": 1,
+      "stage": "easy",
+      "retention": false,
+      "task_id": "105",
+      "complexity": 4,
+      "reference_actions": 1,
+      "write_actions": 1,
+      "nl_checks": 1,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "group": 2,
+      "stage": "easy",
+      "retention": false,
+      "task_id": "96",
+      "complexity": 6,
+      "reference_actions": 2,
+      "write_actions": 2,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "group": 3,
+      "stage": "easy",
+      "retention": false,
+      "task_id": "1",
+      "complexity": 7,
+      "reference_actions": 5,
+      "write_actions": 1,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "group": 4,
+      "stage": "easy",
+      "retention": false,
+      "task_id": "91",
+      "complexity": 7,
+      "reference_actions": 2,
+      "write_actions": 2,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "group": 5,
+      "stage": "easy",
+      "retention": false,
+      "task_id": "99",
+      "complexity": 7,
+      "reference_actions": 2,
+      "write_actions": 2,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "group": 6,
+      "stage": "easy",
+      "retention": false,
+      "task_id": "6",
+      "complexity": 8,
+      "reference_actions": 6,
+      "write_actions": 1,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "group": 7,
+      "stage": "easy",
+      "retention": false,
+      "task_id": "85",
+      "complexity": 3,
+      "reference_actions": 1,
+      "write_actions": 1,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "group": 8,
+      "stage": "easy",
+      "retention": false,
+      "task_id": "105",
+      "complexity": 4,
+      "reference_actions": 1,
+      "write_actions": 1,
+      "nl_checks": 1,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "group": 9,
+      "stage": "easy",
+      "retention": false,
+      "task_id": "96",
+      "complexity": 6,
+      "reference_actions": 2,
+      "write_actions": 2,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "group": 10,
+      "stage": "medium",
+      "retention": false,
+      "task_id": "78",
+      "complexity": 10,
+      "reference_actions": 3,
+      "write_actions": 3,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "group": 11,
+      "stage": "medium",
+      "retention": false,
+      "task_id": "37",
+      "complexity": 8,
+      "reference_actions": 4,
+      "write_actions": 1,
+      "nl_checks": 2,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "group": 12,
+      "stage": "medium",
+      "retention": false,
+      "task_id": "10",
+      "complexity": 8,
+      "reference_actions": 5,
+      "write_actions": 1,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "group": 13,
+      "stage": "medium",
+      "retention": false,
+      "task_id": "13",
+      "complexity": 8,
+      "reference_actions": 5,
+      "write_actions": 1,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "group": 14,
+      "stage": "medium",
+      "retention": true,
+      "task_id": "105",
+      "complexity": 4,
+      "reference_actions": 1,
+      "write_actions": 1,
+      "nl_checks": 1,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "group": 15,
+      "stage": "medium",
+      "retention": false,
+      "task_id": "44",
+      "complexity": 8,
+      "reference_actions": 5,
+      "write_actions": 1,
+      "nl_checks": 1,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "group": 16,
+      "stage": "medium",
+      "retention": false,
+      "task_id": "113",
+      "complexity": 8,
+      "reference_actions": 2,
+      "write_actions": 2,
+      "nl_checks": 1,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "group": 17,
+      "stage": "medium",
+      "retention": false,
+      "task_id": "48",
+      "complexity": 10,
+      "reference_actions": 6,
+      "write_actions": 1,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 3
+    },
+    {
+      "group": 18,
+      "stage": "medium",
+      "retention": false,
+      "task_id": "37",
+      "complexity": 8,
+      "reference_actions": 4,
+      "write_actions": 1,
+      "nl_checks": 2,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "group": 19,
+      "stage": "medium",
+      "retention": true,
+      "task_id": "85",
+      "complexity": 3,
+      "reference_actions": 1,
+      "write_actions": 1,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "group": 20,
+      "stage": "hard",
+      "retention": false,
+      "task_id": "103",
+      "complexity": 15,
+      "reference_actions": 4,
+      "write_actions": 4,
+      "nl_checks": 1,
+      "env_checks": 0,
+      "distinct_orders": 3
+    },
+    {
+      "group": 21,
+      "stage": "hard",
+      "retention": false,
+      "task_id": "19",
+      "complexity": 12,
+      "reference_actions": 7,
+      "write_actions": 1,
+      "nl_checks": 2,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "group": 22,
+      "stage": "hard",
+      "retention": false,
+      "task_id": "14",
+      "complexity": 11,
+      "reference_actions": 6,
+      "write_actions": 2,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "group": 23,
+      "stage": "hard",
+      "retention": false,
+      "task_id": "112",
+      "complexity": 10,
+      "reference_actions": 3,
+      "write_actions": 3,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "group": 24,
+      "stage": "hard",
+      "retention": true,
+      "task_id": "85",
+      "complexity": 3,
+      "reference_actions": 1,
+      "write_actions": 1,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 1
+    },
+    {
+      "group": 25,
+      "stage": "hard",
+      "retention": false,
+      "task_id": "35",
+      "complexity": 12,
+      "reference_actions": 7,
+      "write_actions": 2,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "group": 26,
+      "stage": "hard",
+      "retention": false,
+      "task_id": "59",
+      "complexity": 12,
+      "reference_actions": 5,
+      "write_actions": 2,
+      "nl_checks": 2,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "group": 27,
+      "stage": "hard",
+      "retention": false,
+      "task_id": "19",
+      "complexity": 12,
+      "reference_actions": 7,
+      "write_actions": 1,
+      "nl_checks": 2,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "group": 28,
+      "stage": "hard",
+      "retention": false,
+      "task_id": "14",
+      "complexity": 11,
+      "reference_actions": 6,
+      "write_actions": 2,
+      "nl_checks": 0,
+      "env_checks": 0,
+      "distinct_orders": 2
+    },
+    {
+      "group": 29,
+      "stage": "hard",
+      "retention": true,
+      "task_id": "44",
+      "complexity": 8,
+      "reference_actions": 5,
+      "write_actions": 1,
+      "nl_checks": 1,
+      "env_checks": 0,
+      "distinct_orders": 1
+    }
+  ]
+}

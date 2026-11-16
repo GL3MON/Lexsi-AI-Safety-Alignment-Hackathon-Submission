@@ -1,0 +1,8 @@
+{
+  "job_id": "6af89aab29dd05ff03679166",
+  "url": "https://huggingface.co/jobs/GL3MON/6af89aab29dd05ff03679166",
+  "reserved_maximum_usd": 0.94,
+  "task": "clarification-sft-128",
+  "results_repo": "GL3MON/aya-clarification-pilot-20261114T173015",
+  "timeout_minutes": 30
+}

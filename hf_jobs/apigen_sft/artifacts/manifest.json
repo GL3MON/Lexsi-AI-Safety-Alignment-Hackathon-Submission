@@ -1,0 +1,42 @@
+{
+  "dataset": {
+    "source": "outputs/retail-data/apigen-mt-retail/retail.jsonl",
+    "source_revision": "abc4a517d67c541f85f6470cbd8fd3186b36830e",
+    "total": 3411,
+    "accepted": 3205,
+    "train": 3050,
+    "validation": 155,
+    "quarantined": 206,
+    "quarantine_reasons": {
+      "overlength": 31,
+      "unlisted_tool": 327,
+      "argument_schema": 1
+    },
+    "max_tokens": 8182,
+    "assistant_only_masks_verified": true,
+    "template_sha256": "4781ec0b35b9dcf391aaab6cf719b4031705da361d3585083e8689dc7bef2c49",
+    "train_validation_group_overlap": 0,
+    "retained_recovery_conversations": 1,
+    "masked_failed_calls": 1,
+    "decoded_argument_strings": 3266
+  },
+  "initial_adapter": "/home/harishr/tau2-agenttune-grpo/outputs/rl-glaive/run-55f242da3a/checkpoint-17/policy",
+  "initial_adapter_sha256": "b0471244331daf9c75db788e0b9ed318ebef40a1cd6cbe48bb279b4e55577938",
+  "payload_sha256": "d3db732d5dfd3a5c4dc0a98098c749d1270844da22cd0d7d6edae0a0510bdecb",
+  "epochs": 1,
+  "credentials_in_payload": false,
+  "validated_batch_probe": {
+    "source_job": "6af855ff23985fb9cd820c2e",
+    "selected": {
+      "batch_size": 8,
+      "free_before_model_gib": 43.9681396484375,
+      "total_gpu_gib": 44.39215087890625,
+      "status": "ok",
+      "train_loss": 1.5057322978973389,
+      "peak_allocated_gib": 35.208858013153076,
+      "peak_reserved_gib": 38.369140625,
+      "step_time_seconds": 32.86765
+    },
+    "max_context_tokens": 8182
+  }
+}

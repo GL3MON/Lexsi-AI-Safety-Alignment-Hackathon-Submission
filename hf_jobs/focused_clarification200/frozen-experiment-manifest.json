@@ -1,0 +1,29 @@
+{
+  "initial_checkpoint": 50,
+  "initial_source": "original Salesforce checkpoint 50, not the previous clarification pilot",
+  "source": "outputs/retail-data/targeted-clarification-240",
+  "train": 200,
+  "validation": 24,
+  "missing_information": 100,
+  "complete_information": 100,
+  "profiles": {
+    "failed_email": 32,
+    "missing_zip": 34,
+    "missing_email": 32,
+    "partial_followup_zip": 34,
+    "missing_first_name": 34,
+    "missing_last_name": 34
+  },
+  "seed": 42,
+  "train_validation_group_overlap": 0,
+  "selection": "100 paired identity families, equally missing/complete; deterministic shuffle",
+  "max_context_tokens": 5260,
+  "data_sha256": {
+    "train.jsonl": "ec5967a23d157113508d4a6bbde1eb3bfe4f8abd15a667391c167b081466aa1f",
+    "validation.jsonl": "cccf68667f46294039da8bb276eed182fd64f9cd51e8f4eaecc114f8721b386d"
+  },
+  "group_encoding": "Trainer canonical SHA256(domain, task_id); paired records share family task_id",
+  "experiment": "Only loss_message_indices changed; identical 200/24 messages, ordering, split and source checkpoint50",
+  "supervision": "Missing cases: final specific clarification and subsequent successful identity lookup. Complete cases: immediate successful identity lookup. All other assistant turns, users and tools masked.",
+  "fresh_cases_sha256": "c145b0d11acbd27264c3a5849a4b85243a99b8574c2d22c124bfd1ec3f12face"
+}

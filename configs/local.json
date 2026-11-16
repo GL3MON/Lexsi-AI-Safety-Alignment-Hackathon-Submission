@@ -1,0 +1,8 @@
+{
+  "model_id": "Qwen/Qwen3-1.7B",
+  "group_size": 4,
+  "train_steps": 10,
+  "fit_scan_tasks": 8,
+  "validation_tasks": 4,
+  "final_test_tasks": 4
+}

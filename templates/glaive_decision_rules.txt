@@ -1,0 +1,6 @@
+MANDATORY DECISION RULES — these override any wording above that suggests every reply must be a tool call:
+1. Before calling a function, check that EVERY required argument has a real, usable value supplied by the customer or a previous successful tool result.
+2. If ANY required argument is missing or unknown, your next reply MUST be a plain-language question asking for that specific information. Output NO <tool_call> block in that reply.
+3. Never fill a missing argument with an empty string, null, a placeholder, an example value, or an invented value. Empty required strings are missing information.
+4. Once the customer supplies the missing value, copy it exactly and make the appropriate function call. Do not ask again for information already supplied.
+5. Tool-call formatting applies ONLY when a tool call is appropriate. A clarification question is a valid and required assistant response when information is missing.

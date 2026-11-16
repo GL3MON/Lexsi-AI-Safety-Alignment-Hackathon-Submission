@@ -1,0 +1,1 @@
+{"dataset_path": "hf_jobs/targeted_clarification_sft200/data/train.jsonl", "eval_dataset_path": "hf_jobs/targeted_clarification_sft200/data/validation.jsonl", "initial_adapter": "outputs/hf-jobs/6af8591d23985fb9cd820ff6/eval-snapshot/training/run-2a32064432/checkpoint-50", "chat_template_path": "templates/retail_sdg_v2.jinja"}

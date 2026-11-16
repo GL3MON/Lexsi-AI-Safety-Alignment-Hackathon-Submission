@@ -1,0 +1,15 @@
+{
+  "job_id": "6af89fda23985fb9cd825d3d",
+  "url": "https://huggingface.co/jobs/GL3MON/6af89fda23985fb9cd825d3d",
+  "reserved_maximum_usd": 0.79,
+  "task": "clarification-sft-128-from96-with24eval",
+  "results_repo": "GL3MON/aya-clarification-pilot96-20261114T175216",
+  "timeout_minutes": 25,
+  "initial_checkpoint": 96,
+  "train_samples": 128,
+  "validation_samples": 16,
+  "batch_size": 8,
+  "gradient_accumulation_steps": 1,
+  "epochs": 1,
+  "eval_cases": 24
+}

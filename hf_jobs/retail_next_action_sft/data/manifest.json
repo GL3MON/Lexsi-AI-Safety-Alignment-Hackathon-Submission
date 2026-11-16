@@ -1,0 +1,70 @@
+{
+  "accepted": 480,
+  "target": 480,
+  "complete": true,
+  "generation_complete": true,
+  "train": 432,
+  "validation": 48,
+  "clarifications": 192,
+  "tool_calls": 288,
+  "order_id_known": 240,
+  "order_id_unknown": 240,
+  "profiles": {
+    "missing_first_name": 48,
+    "missing_last_name": 48,
+    "missing_zip": 48,
+    "missing_identity": 48,
+    "failed_email": 48,
+    "partial_first_name": 48,
+    "partial_last_name": 48,
+    "partial_zip": 48,
+    "authenticated_get_profile": 48,
+    "profile_get_order": 48
+  },
+  "max_context_tokens": 4758,
+  "updated_at": 1794683166.4545774,
+  "validation_passed": true,
+  "train_validation_group_overlap": 0,
+  "canonical_group_ids_verified": true,
+  "labels_verified": true,
+  "one_supervised_response_per_sample": true,
+  "conversation_pair_count": 240,
+  "training_launched": false,
+  "files_sha256": {
+    "sft.jsonl": "70b0b21d444d123a181ff0c2b10477a5c531670f9c6797c523c5842d92badbd1",
+    "validation.jsonl": "b602bee94df6ffe1b886b00b4af7ade9ca6154f861b016b6e0c04cb64ebcd49b",
+    "all.jsonl": "1766a2f16d9177b1d6d8eb34def96205614cad535e35079a4284c8a280c8ec6f"
+  },
+  "initial_checkpoint": 50,
+  "source": "outputs/retail-data/retail-next-action-480",
+  "audit": {
+    "records": 480,
+    "train": 432,
+    "validation": 48,
+    "all_passed": true,
+    "duplicates": 0,
+    "train_validation_group_overlap": 0,
+    "paired_families": 240,
+    "real_tool_calls_replayed": 480,
+    "max_context_tokens": 4758,
+    "supervised_tokens": 17204,
+    "one_next_response_supervised": true,
+    "other_assistant_and_user_tool_messages_masked": true,
+    "files_sha256": {
+      "sft.jsonl": "70b0b21d444d123a181ff0c2b10477a5c531670f9c6797c523c5842d92badbd1",
+      "validation.jsonl": "b602bee94df6ffe1b886b00b4af7ade9ca6154f861b016b6e0c04cb64ebcd49b",
+      "all.jsonl": "1766a2f16d9177b1d6d8eb34def96205614cad535e35079a4284c8a280c8ec6f"
+    }
+  },
+  "training_settings": {
+    "batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "num_train_epochs": 1,
+    "optimizer_steps": 54,
+    "learning_rate": 2e-05,
+    "eval_steps": 9,
+    "save_steps": 9,
+    "save_total_limit": 2
+  },
+  "evaluation_note": "Existing24 and previously used36 are development diagnostics, not new blind tests."
+}
